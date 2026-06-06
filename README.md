@@ -8,7 +8,7 @@ This repository contains the full LÖVE2D game prototype, the Python generation 
 
 ## How It Works
 
-When the player presses Enter on the title screen, the game fades to black and immediately calls the Python API to generate the first quest chapter using an LLM. A progress bar and elapsed timer are shown during generation. Once the quest plan is returned as JSON, the game starts and the player executes the generated quest steps.
+When the player presses Enter on the title screen, the game jumps into a loading screen and immediately calls the Python API to generate the first quest chapter using an LLM. A timer is shown during generation. Once the quest plan is returned as JSON, the game starts and the player executes the generated quest steps.
 
 The generation service receives three inputs: the shared input definitions (action library, world rules, chapter definitions, character definitions), the live world state exported from the game, and the system and user prompts that instruct the LLM. When a chapter is completed, the world state is updated and sent to the API as context for the next chapter generation.
 
@@ -19,7 +19,7 @@ LLM_QUESTS = true   -- enable/disable LLM quest generation
 LLM_NPCS   = false  -- enable/disable LLM NPC behaviour scheduling
 ```
 
-Setting `LLM_QUESTS = false` launches the game without generating a quest. Setting `LLM_NPCS = true` enables the LLM-driven NPC behaviour system (off by default).
+Setting `LLM_QUESTS = false` launches the game without generating a quest. Setting `LLM_NPCS = true` enables the LLM-driven NPC behaviour system developed by peer Peter Husen (off by default).
 
 ---
 
@@ -34,15 +34,14 @@ Setting `LLM_QUESTS = false` launches the game without generating a quest. Setti
 │   QuestDialog.lua      → Displays LLM-generated dialogue exchanges in-game
 │   QuestUI.lua          → In-game quest objectives panel
 │   WorldState.lua       → Tracks the current state of all locations, items, and characters
-│   NPCBehaviorSystem.lua → LLM-driven NPC scheduling system (by Peter, off by default)
-│   NPCManager.lua       → Manages NPC state, position, and inventory
+│   NPCfiles             → Manages NPC state, actions, position, inventory and more for Peter Husen's project
 │   Player.lua           → Player movement, shooting, item collection
 │   Level.lua            → Tiled map loading and tile management
-│   ...                  → Supporting systems (inventory, pathfinding, enemies, shader, etc.)
+│   ...                  → Supporting systems (inventory, pathfinding, enemies, shader, zombies, etc.)
 │
 /api                     → Python quest generation API (FastAPI)
-│   quest_generation.py  → Main API service with /generate and /validate endpoints
-│   npc_generation.py    → NPC behaviour generation endpoint
+│   quest_generation.py  → Quest generation API; /generate produces a chapter plan, /validate checks it against the live world state and automatically replans if invalid (/validate is not yet called from the game and remains future work)
+│   npc_generation.py    → NPC behaviour generation endpoint for Peter Husen's project
 │
 /data                    → Shared input definitions — read by both the game client and the generation service
 │   action_library.json  → All valid player actions with preconditions and parameters
@@ -111,7 +110,7 @@ Press **Enter** on the title screen to start. The game will generate the first q
 
 ## Generation Scripts
 
-The `/Generation_Scripts` folder contains the standalone script (`Quest_QwenV9.py`) used to generate quest plans outside of the game environment. This is the script used during the evaluation described in the paper.
+The `/Generation_Scripts` folder contains the standalone script (`Quest_QwenV9.py`) used to generate quest plans outside of the game environment. This is the script used for single run tests.
 
 Sample outputs from manual generation runs are stored per model:
 
@@ -126,7 +125,7 @@ Sample outputs from manual generation runs are stored per model:
 
 ## Evaluation Scripts
 
-The `/Eval_Scripts` folder contains the scripts used to measure quest quality across the five models evaluated in the paper.
+The `/Eval_Scripts` folder contains the scripts used to measure quest quality across the five models evaluated in the paper. This is the script used during the evaluation described in the paper.
 
 - `eval_quest_generation.py` — runs generation and evaluation across all models and chapters
 - `Evaluation_Notebook_First_Version.ipynb` — notebook for analysing and visualising results
@@ -154,4 +153,4 @@ Each folder contains per-run quest outputs (JSON), checkpoints (JSON), and summa
 
 ## Credits
 
-The game prototype was originally developed by **Edirlei Soares de Lima** (supervisor) and adapted for this project. The NPC behaviour system (`NPCBehaviorSystem`, `NPCScheduler`, `NPCBehaviorWorker`) was developed by **Peter** as part of a parallel research track and is included here as an optional component.
+The game prototype was originally developed by **Edirlei Soares de Lima** (supervisor) and adapted for this project. The NPC behaviour system was developed by **Peter Husen** as part of a parallel research track and is included here as an optional component.
