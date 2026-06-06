@@ -1,0 +1,609 @@
+[
+  {
+    "model": "GPT-OSS-120B",
+    "run": 9,
+    "chapter_id": "C1",
+    "quest_data": {
+      "chapter_id": "C1",
+      "chapter_title": "Hope in the Lab",
+      "quest_type": "main",
+      "required": true,
+      "scale": "medium",
+      "quests": [
+        {
+          "quest_id": "Q1",
+          "quest_title": "Secure a Cure for the Infected",
+          "steps": [
+            {
+              "step": 1,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "safehouse",
+                "to": "village"
+              }
+            },
+            {
+              "step": 2,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "village",
+                "to": "store"
+              }
+            },
+            {
+              "step": 3,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "target": "Anne",
+                "place": "store",
+                "dialogue_content": [
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Anne, the village is collapsing. Do you know where I can find a way to help?"
+                  },
+                  {
+                    "speaker": "Anne",
+                    "line": "The lab might hold something, but it's locked. I heard a key was buried near the old graveyard."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Thanks, I'll check the graveyard."
+                  }
+                ]
+              }
+            },
+            {
+              "step": 4,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "store",
+                "to": "village"
+              }
+            },
+            {
+              "step": 5,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "village",
+                "to": "graveyard"
+              }
+            },
+            {
+              "step": 6,
+              "action": "PICKUP",
+              "actor": "player",
+              "parameters": {
+                "item": "lab_key_1",
+                "place": "graveyard"
+              }
+            },
+            {
+              "step": 7,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "graveyard",
+                "to": "village"
+              }
+            },
+            {
+              "step": 8,
+              "action": "UNLOCK",
+              "actor": "player",
+              "parameters": {
+                "key_item": "lab_key_1",
+                "target_place": "laboratory"
+              }
+            },
+            {
+              "step": 9,
+              "action": "PICKUP",
+              "actor": "player",
+              "parameters": {
+                "item": "fuse_1",
+                "place": "laboratory"
+              }
+            },
+            {
+              "step": 10,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "laboratory",
+                "to": "village"
+              }
+            },
+            {
+              "step": 11,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "village",
+                "to": "powerstation"
+              }
+            },
+            {
+              "step": 12,
+              "action": "TURN_POWER_ON",
+              "actor": "player",
+              "parameters": {
+                "fuse_item": "fuse_1",
+                "place": "powerstation",
+                "target_place": "laboratory"
+              }
+            },
+            {
+              "step": 13,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "powerstation",
+                "to": "village"
+              }
+            },
+            {
+              "step": 14,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "village",
+                "to": "hospital1"
+              }
+            },
+            {
+              "step": 15,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "hospital1",
+                "to": "hospital2"
+              }
+            },
+            {
+              "step": 16,
+              "action": "PICKUP",
+              "actor": "player",
+              "parameters": {
+                "item": "cure_sample_1",
+                "place": "hospital2"
+              }
+            },
+            {
+              "step": 17,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "hospital2",
+                "to": "village"
+              }
+            },
+            {
+              "step": 18,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "village",
+                "to": "laboratory"
+              }
+            },
+            {
+              "step": 19,
+              "action": "SYNTHESIZE_CURE",
+              "actor": "player",
+              "parameters": {
+                "place": "laboratory"
+              }
+            },
+            {
+              "step": 20,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "target": "Sarah",
+                "place": "laboratory",
+                "dialogue_content": [
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Sarah, I have managed to synthesize an antidote."
+                  },
+                  {
+                    "speaker": "Sarah",
+                    "line": "Finally. Use it quickly; the infection is spreading."
+                  }
+                ]
+              }
+            },
+            {
+              "step": 21,
+              "action": "USE_CURE",
+              "actor": "player",
+              "parameters": {
+                "item": "antidote_1",
+                "target": "Sarah"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "model": "GPT-OSS-120B",
+    "run": 9,
+    "chapter_id": "C2",
+    "quest_data": {
+      "chapter_id": "C2",
+      "chapter_title": "Strings of the Shadow",
+      "quest_type": "main",
+      "required": true,
+      "scale": "large",
+      "quests": [
+        {
+          "quest_id": "Q1",
+          "quest_title": "Gather Intel at the Store",
+          "steps": [
+            {
+              "step": 1,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "laboratory",
+                "to": "village"
+              }
+            },
+            {
+              "step": 2,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "village",
+                "to": "store"
+              }
+            },
+            {
+              "step": 3,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "target": "anne",
+                "place": "store",
+                "dialogue_content": [
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Anne, have you noticed anything odd around the outpost lately?"
+                  },
+                  {
+                    "speaker": "anne",
+                    "line": "People come and go, but I've seen more shipments heading toward the outpost than leaving. Something's being stockpiled."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Do you know who's pulling the strings?"
+                  },
+                  {
+                    "speaker": "anne",
+                    "line": "Rumors point to the Doctor. He keeps the lab humming, but his motives feel... clinical."
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "quest_id": "Q2",
+          "quest_title": "Cure the Infected Scientist",
+          "steps": [
+            {
+              "step": 4,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "store",
+                "to": "village"
+              }
+            },
+            {
+              "step": 5,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "village",
+                "to": "laboratory"
+              }
+            },
+            {
+              "step": 6,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "target": "sarah",
+                "place": "laboratory",
+                "dialogue_content": [
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Sarah, I have an antidote. Let me help you."
+                  },
+                  {
+                    "speaker": "sarah",
+                    "line": "The infection spreads fast. If you can cure me, perhaps you'll understand what we're really up against."
+                  }
+                ]
+              }
+            },
+            {
+              "step": 7,
+              "action": "USE_CURE",
+              "actor": "player",
+              "parameters": {
+                "item": "antidote_1",
+                "target": "sarah"
+              }
+            },
+            {
+              "step": 8,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "target": "sarah",
+                "place": "laboratory",
+                "dialogue_content": [
+                  {
+                    "speaker": "sarah",
+                    "line": "Thank you. I've been forced to run experiments for the Doctor. He's using the island as a testing ground."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Where can I find him?"
+                  },
+                  {
+                    "speaker": "sarah",
+                    "line": "His main lab is in outpost3. He moves between outpost2 and outpost3, guarded by Viktor."
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "quest_id": "Q3",
+          "quest_title": "Infiltrate the Outpost",
+          "steps": [
+            {
+              "step": 9,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "laboratory",
+                "to": "village"
+              }
+            },
+            {
+              "step": 10,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "village",
+                "to": "cave"
+              }
+            },
+            {
+              "step": 11,
+              "action": "PICKUP",
+              "actor": "player",
+              "parameters": {
+                "item": "outpost_key_1",
+                "place": "cave"
+              }
+            },
+            {
+              "step": 12,
+              "action": "UNLOCK",
+              "actor": "player",
+              "parameters": {
+                "key_item": "outpost_key_1",
+                "target_place": "outpost1"
+              }
+            },
+            {
+              "step": 13,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "outpost1",
+                "to": "outpost2"
+              }
+            },
+            {
+              "step": 14,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "target": "viktor",
+                "place": "outpost2",
+                "dialogue_content": [
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Viktor, I've heard you're the one pulling the island's strings."
+                  },
+                  {
+                    "speaker": "viktor",
+                    "line": "Control is necessary. The Doctor's experiments threaten the order I maintain."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Your order is built on fear. I intend to stop both of you."
+                  },
+                  {
+                    "speaker": "viktor",
+                    "line": "Then you will find yourself outmatched. Leave now, or face the consequences."
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "model": "GPT-OSS-120B",
+    "run": 9,
+    "chapter_id": "C3",
+    "quest_data": {
+      "chapter_id": "C3",
+      "chapter_title": "The Final Escape",
+      "quest_type": "main",
+      "required": true,
+      "scale": "large",
+      "quests": [
+        {
+          "quest_id": "Q1",
+          "quest_title": "Acquire the Toolkit",
+          "steps": [
+            {
+              "step": 1,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "outpost2",
+                "to": "outpost3"
+              }
+            },
+            {
+              "step": 2,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "target": "The Doctor",
+                "place": "outpost3",
+                "dialogue_content": [
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Doctor, I need any tools you have. The dock's boat is our only chance out."
+                  },
+                  {
+                    "speaker": "The Doctor",
+                    "line": "A pragmatic request. Take the toolkit; it may serve your purpose, though I doubt you'll succeed."
+                  }
+                ]
+              }
+            },
+            {
+              "step": 3,
+              "action": "PICKUP",
+              "actor": "player",
+              "parameters": {
+                "item": "toolkit_1",
+                "place": "outpost3"
+              }
+            }
+          ]
+        },
+        {
+          "quest_id": "Q2",
+          "quest_title": "Repair the Boat and Escape",
+          "steps": [
+            {
+              "step": 4,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "outpost3",
+                "to": "outpost2"
+              }
+            },
+            {
+              "step": 5,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "outpost2",
+                "to": "outpost1"
+              }
+            },
+            {
+              "step": 6,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "outpost1",
+                "to": "village"
+              }
+            },
+            {
+              "step": 7,
+              "action": "PICKUP",
+              "actor": "player",
+              "parameters": {
+                "item": "wood_1",
+                "place": "village"
+              }
+            },
+            {
+              "step": 8,
+              "action": "PICKUP",
+              "actor": "player",
+              "parameters": {
+                "item": "wood_2",
+                "place": "village"
+              }
+            },
+            {
+              "step": 9,
+              "action": "PICKUP",
+              "actor": "player",
+              "parameters": {
+                "item": "wood_3",
+                "place": "village"
+              }
+            },
+            {
+              "step": 10,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "village",
+                "to": "dock"
+              }
+            },
+            {
+              "step": 11,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "target": "Mary",
+                "place": "dock",
+                "dialogue_content": [
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Mary, the boat's broken. I have a toolkit and some wood\u2014can we fix it?"
+                  },
+                  {
+                    "speaker": "Mary",
+                    "line": "Good. Hand me the tools and the timber, and I'll get this vessel seaworthy. Time's short."
+                  }
+                ]
+              }
+            },
+            {
+              "step": 12,
+              "action": "REPAIR",
+              "actor": "player",
+              "parameters": {
+                "toolkit_item": "toolkit_1",
+                "wood_item": "wood_1",
+                "target": "boat",
+                "place": "dock"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+]

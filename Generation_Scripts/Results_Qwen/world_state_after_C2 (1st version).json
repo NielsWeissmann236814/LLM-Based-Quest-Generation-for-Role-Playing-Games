@@ -1,0 +1,305 @@
+{
+  "world_state": {
+    "player": {
+      "location": "hospital2",
+      "conditions": [
+        "healthy"
+      ],
+      "inventory": [
+        "cure_sample_1"
+      ]
+    },
+    "npcs": [
+      {
+        "name": "the_doctor",
+        "location": "outpost3",
+        "conditions": [
+          "healthy"
+        ],
+        "inventory": []
+      },
+      {
+        "name": "viktor",
+        "location": "outpost2",
+        "conditions": [
+          "healthy"
+        ],
+        "inventory": []
+      },
+      {
+        "name": "linda",
+        "location": "farm",
+        "conditions": [
+          "healthy"
+        ],
+        "inventory": []
+      },
+      {
+        "name": "marcus",
+        "location": "hospital2",
+        "conditions": [
+          "healthy"
+        ],
+        "inventory": []
+      },
+      {
+        "name": "sarah",
+        "location": "laboratory",
+        "conditions": [
+          "infected"
+        ],
+        "inventory": []
+      },
+      {
+        "name": "mary",
+        "location": "dock",
+        "conditions": [
+          "healthy"
+        ],
+        "inventory": []
+      },
+      {
+        "name": "george",
+        "location": "powerstation",
+        "conditions": [
+          "healthy"
+        ],
+        "inventory": []
+      },
+      {
+        "name": "anne",
+        "location": "store",
+        "conditions": [
+          "healthy"
+        ],
+        "inventory": []
+      }
+    ],
+    "locations": [
+      {
+        "name": "safehouse",
+        "type": "interior",
+        "conditions": [
+          "unlocked",
+          "safe"
+        ]
+      },
+      {
+        "name": "village",
+        "type": "exterior",
+        "conditions": [
+          "unlocked",
+          "dangerous"
+        ]
+      },
+      {
+        "name": "cave",
+        "type": "exterior",
+        "conditions": [
+          "unlocked",
+          "safe"
+        ]
+      },
+      {
+        "name": "store",
+        "type": "interior",
+        "conditions": [
+          "unlocked",
+          "safe"
+        ]
+      },
+      {
+        "name": "hospital1",
+        "type": "interior",
+        "conditions": [
+          "unlocked",
+          "safe"
+        ]
+      },
+      {
+        "name": "hospital2",
+        "type": "interior",
+        "conditions": [
+          "unlocked",
+          "safe"
+        ]
+      },
+      {
+        "name": "laboratory",
+        "type": "interior",
+        "conditions": [
+          "safe",
+          "power_on"
+        ],
+        "access": {
+          "requires_key": "lab_key_1"
+        }
+      },
+      {
+        "name": "outpost1",
+        "type": "interior",
+        "conditions": [
+          "safe"
+        ],
+        "access": {
+          "requires_key": "outpost_key_1"
+        }
+      },
+      {
+        "name": "outpost2",
+        "type": "interior",
+        "conditions": [
+          "unlocked",
+          "safe"
+        ]
+      },
+      {
+        "name": "outpost3",
+        "type": "interior",
+        "conditions": [
+          "unlocked",
+          "safe"
+        ]
+      },
+      {
+        "name": "farm",
+        "type": "exterior",
+        "conditions": [
+          "unlocked",
+          "safe"
+        ]
+      },
+      {
+        "name": "dock",
+        "type": "exterior",
+        "conditions": [
+          "unlocked",
+          "safe"
+        ]
+      },
+      {
+        "name": "powerstation",
+        "type": "exterior",
+        "conditions": [
+          "unlocked",
+          "safe"
+        ]
+      },
+      {
+        "name": "graveyard",
+        "type": "exterior",
+        "conditions": [
+          "safe"
+        ]
+      }
+    ],
+    "connections": [
+      {
+        "from": "safehouse",
+        "to": "village"
+      },
+      {
+        "from": "village",
+        "to": "store"
+      },
+      {
+        "from": "village",
+        "to": "hospital1"
+      },
+      {
+        "from": "hospital1",
+        "to": "hospital2"
+      },
+      {
+        "from": "village",
+        "to": "laboratory"
+      },
+      {
+        "from": "village",
+        "to": "outpost1"
+      },
+      {
+        "from": "village",
+        "to": "cave"
+      },
+      {
+        "from": "outpost1",
+        "to": "outpost2"
+      },
+      {
+        "from": "outpost2",
+        "to": "outpost3"
+      },
+      {
+        "from": "village",
+        "to": "farm"
+      },
+      {
+        "from": "village",
+        "to": "dock"
+      },
+      {
+        "from": "village",
+        "to": "powerstation"
+      },
+      {
+        "from": "village",
+        "to": "graveyard"
+      }
+    ],
+    "items": [
+      {
+        "name": "cure_sample_1",
+        "type": "cure_sample",
+        "location": null
+      },
+      {
+        "name": "food_supplies_1",
+        "type": "food_supplies",
+        "location": "farm"
+      },
+      {
+        "name": "fuse_1",
+        "type": "fuse",
+        "location": null
+      },
+      {
+        "name": "lab_key_1",
+        "type": "lab_key",
+        "location": null
+      },
+      {
+        "name": "outpost_key_1",
+        "type": "outpost_key",
+        "location": null
+      },
+      {
+        "name": "toolkit_1",
+        "type": "toolkit",
+        "location": "outpost3"
+      },
+      {
+        "name": "wood_1",
+        "type": "wood",
+        "location": "village"
+      },
+      {
+        "name": "wood_2",
+        "type": "wood",
+        "location": "village"
+      },
+      {
+        "name": "wood_3",
+        "type": "wood",
+        "location": "village"
+      }
+    ],
+    "objects": [
+      {
+        "name": "boat",
+        "state": "broken",
+        "location": "dock"
+      }
+    ]
+  }
+}

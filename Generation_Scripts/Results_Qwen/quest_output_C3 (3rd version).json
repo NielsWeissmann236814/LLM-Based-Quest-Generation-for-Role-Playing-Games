@@ -1,0 +1,137 @@
+{
+  "chapter_id": "C3",
+  "chapter_title": "Escape Route",
+  "quest_type": "main",
+  "required": true,
+  "scale": "large",
+  "quests": [
+    {
+      "quest_id": "Q3_1",
+      "quest_title": "The Final Journey",
+      "steps": [
+        {
+          "step": 1,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "laboratory",
+            "to": "village"
+          }
+        },
+        {
+          "step": 2,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "village",
+            "to": "dock"
+          }
+        },
+        {
+          "step": 3,
+          "action": "TALK",
+          "actor": "player",
+          "parameters": {
+            "target": "mary",
+            "place": "dock",
+            "dialogue_content": [
+              {
+                "speaker": "MARY",
+                "line": "You're here to help with the boat?"
+              },
+              {
+                "speaker": "PLAYER",
+                "line": "Yes. I want to leave this island."
+              },
+              {
+                "speaker": "MARY",
+                "line": "Good. The boat's broken but fixable. I need wood and a toolkit."
+              },
+              {
+                "speaker": "PLAYER",
+                "line": "I have the toolkit. I'll get wood from the village."
+              },
+              {
+                "speaker": "MARY",
+                "line": "Then get moving. Time's wasting. Every hour we stay, the risk grows."
+              },
+              {
+                "speaker": "PLAYER",
+                "line": "I'll be back shortly."
+              }
+            ]
+          }
+        },
+        {
+          "step": 4,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "dock",
+            "to": "village"
+          }
+        },
+        {
+          "step": 5,
+          "action": "PICKUP",
+          "actor": "player",
+          "parameters": {
+            "item": "wood_1",
+            "place": "village"
+          }
+        },
+        {
+          "step": 6,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "village",
+            "to": "dock"
+          }
+        },
+        {
+          "step": 7,
+          "action": "REPAIR",
+          "actor": "player",
+          "parameters": {
+            "toolkit_item": "toolkit_1",
+            "wood_item": "wood_1",
+            "target": "boat",
+            "place": "dock"
+          }
+        },
+        {
+          "step": 8,
+          "action": "TALK",
+          "actor": "player",
+          "parameters": {
+            "target": "mary",
+            "place": "dock",
+            "dialogue_content": [
+              {
+                "speaker": "MARY",
+                "line": "The boat's ready?"
+              },
+              {
+                "speaker": "PLAYER",
+                "line": "Yes, it's repaired and ready to sail."
+              },
+              {
+                "speaker": "MARY",
+                "line": "Good. Get aboard. We're leaving now."
+              },
+              {
+                "speaker": "PLAYER",
+                "line": "Thank you for getting us out of here."
+              },
+              {
+                "speaker": "MARY",
+                "line": "Just focus on the horizon. This place is done with us."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,269 @@
+{
+  "chapter_id": "C1",
+  "chapter_title": "The First Cure",
+  "quest_type": "main",
+  "required": true,
+  "scale": "medium",
+  "quests": [
+    {
+      "quest_id": "Q1_1",
+      "quest_title": "Rumors in the Store",
+      "steps": [
+        {
+          "step": 1,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "safehouse",
+            "to": "village"
+          }
+        },
+        {
+          "step": 2,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "village",
+            "to": "store"
+          }
+        },
+        {
+          "step": 3,
+          "action": "TALK",
+          "actor": "player",
+          "parameters": {
+            "target": "anne",
+            "place": "store",
+            "dialogue_content": [
+              {
+                "speaker": "PLAYER",
+                "line": "Anne, I need to know what's happening. People are getting sick."
+              },
+              {
+                "speaker": "anne",
+                "line": "You've noticed then. Yes, the village is dying. I've been tracking who falls ill - it's spreading faster than we'd like."
+              },
+              {
+                "speaker": "PLAYER",
+                "line": "Is there anything we can do about it?"
+              },
+              {
+                "speaker": "anne",
+                "line": "Sarah's been working on something at the laboratory. She's infected now, but she left notes about a cure sample somewhere in the hospital."
+              },
+              {
+                "speaker": "PLAYER",
+                "line": "The laboratory? I can't get in - it's locked."
+              },
+              {
+                "speaker": "anne",
+                "line": "The key's in the graveyard. Sarah told me about it before she got too sick. Be careful out there, traveler."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "quest_id": "Q1_2",
+      "quest_title": "The Key and the Fuse",
+      "steps": [
+        {
+          "step": 4,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "store",
+            "to": "village"
+          }
+        },
+        {
+          "step": 5,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "village",
+            "to": "graveyard"
+          }
+        },
+        {
+          "step": 6,
+          "action": "PICKUP",
+          "actor": "player",
+          "parameters": {
+            "item": "lab_key_1",
+            "place": "graveyard"
+          }
+        },
+        {
+          "step": 7,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "graveyard",
+            "to": "village"
+          }
+        },
+        {
+          "step": 8,
+          "action": "UNLOCK",
+          "actor": "player",
+          "parameters": {
+            "key_item": "lab_key_1",
+            "target_place": "laboratory"
+          }
+        },
+        {
+          "step": 9,
+          "action": "PICKUP",
+          "actor": "player",
+          "parameters": {
+            "item": "fuse_1",
+            "place": "laboratory"
+          }
+        }
+      ]
+    },
+    {
+      "quest_id": "Q1_3",
+      "quest_title": "Power and Hope",
+      "steps": [
+        {
+          "step": 10,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "laboratory",
+            "to": "village"
+          }
+        },
+        {
+          "step": 11,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "village",
+            "to": "powerstation"
+          }
+        },
+        {
+          "step": 12,
+          "action": "TURN_POWER_ON",
+          "actor": "player",
+          "parameters": {
+            "fuse_item": "fuse_1",
+            "place": "powerstation",
+            "target_place": "laboratory"
+          }
+        },
+        {
+          "step": 13,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "powerstation",
+            "to": "village"
+          }
+        },
+        {
+          "step": 14,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "village",
+            "to": "hospital1"
+          }
+        },
+        {
+          "step": 15,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "hospital1",
+            "to": "hospital2"
+          }
+        },
+        {
+          "step": 16,
+          "action": "PICKUP",
+          "actor": "player",
+          "parameters": {
+            "item": "cure_sample_1",
+            "place": "hospital2"
+          }
+        },
+        {
+          "step": 17,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "hospital2",
+            "to": "hospital1"
+          }
+        },
+        {
+          "step": 18,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "hospital1",
+            "to": "village"
+          }
+        },
+        {
+          "step": 19,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "village",
+            "to": "laboratory"
+          }
+        },
+        {
+          "step": 20,
+          "action": "SYNTHESIZE_CURE",
+          "actor": "player",
+          "parameters": {
+            "place": "laboratory"
+          }
+        },
+        {
+          "step": 21,
+          "action": "TALK",
+          "actor": "player",
+          "parameters": {
+            "target": "sarah",
+            "place": "laboratory",
+            "dialogue_content": [
+              {
+                "speaker": "PLAYER",
+                "line": "Sarah, I've got the cure."
+              },
+              {
+                "speaker": "sarah",
+                "line": "You found the sample? And you managed to restore power to the lab. That's... remarkable."
+              },
+              {
+                "speaker": "PLAYER",
+                "line": "I synthesized an antidote. I can cure you now."
+              },
+              {
+                "speaker": "sarah",
+                "line": "Thank you. I was afraid my research would die with me. This changes everything."
+              }
+            ]
+          }
+        },
+        {
+          "step": 22,
+          "action": "USE_CURE",
+          "actor": "player",
+          "parameters": {
+            "item": "antidote",
+            "target": "sarah"
+          }
+        }
+      ]
+    }
+  ]
+}

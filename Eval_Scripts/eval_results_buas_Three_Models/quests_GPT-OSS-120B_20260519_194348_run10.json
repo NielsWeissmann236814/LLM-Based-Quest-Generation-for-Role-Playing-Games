@@ -1,0 +1,614 @@
+[
+  {
+    "model": "GPT-OSS-120B",
+    "run": 10,
+    "chapter_id": "C1",
+    "quest_data": {
+      "chapter_id": "C1",
+      "chapter_title": "A Flicker of Hope",
+      "quest_type": "main",
+      "required": true,
+      "scale": "medium",
+      "quests": [
+        {
+          "quest_id": "Q1",
+          "quest_title": "Access the Laboratory",
+          "steps": [
+            {
+              "step": 1,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "safehouse",
+                "to": "village"
+              }
+            },
+            {
+              "step": 2,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "village",
+                "to": "store"
+              }
+            },
+            {
+              "step": 3,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "target": "anne",
+                "place": "store",
+                "dialogue_content": [
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Anne, I need to get into the laboratory. Any idea where I can find a key?"
+                  },
+                  {
+                    "speaker": "anne",
+                    "line": "The lab's locked tight. I heard a key was buried near the graveyard, among the old stones."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Thanks. I'll go retrieve it."
+                  }
+                ]
+              }
+            },
+            {
+              "step": 4,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "store",
+                "to": "village"
+              }
+            },
+            {
+              "step": 5,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "village",
+                "to": "graveyard"
+              }
+            },
+            {
+              "step": 6,
+              "action": "PICKUP",
+              "actor": "player",
+              "parameters": {
+                "item": "lab_key_1",
+                "place": "graveyard"
+              }
+            },
+            {
+              "step": 7,
+              "action": "UNLOCK",
+              "actor": "player",
+              "parameters": {
+                "key_item": "lab_key_1",
+                "target_place": "laboratory"
+              }
+            },
+            {
+              "step": 8,
+              "action": "PICKUP",
+              "actor": "player",
+              "parameters": {
+                "item": "fuse_1",
+                "place": "laboratory"
+              }
+            }
+          ]
+        },
+        {
+          "quest_id": "Q2",
+          "quest_title": "Restore Power to the Lab",
+          "steps": [
+            {
+              "step": 9,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "laboratory",
+                "to": "village"
+              }
+            },
+            {
+              "step": 10,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "village",
+                "to": "powerstation"
+              }
+            },
+            {
+              "step": 11,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "target": "george",
+                "place": "powerstation",
+                "dialogue_content": [
+                  {
+                    "speaker": "PLAYER",
+                    "line": "George, the lab's dead. Can I use this fuse here?"
+                  },
+                  {
+                    "speaker": "george",
+                    "line": "Plug it in, and the lab will light up. No more darkness."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Appreciate it. I'll get it back on."
+                  }
+                ]
+              }
+            },
+            {
+              "step": 12,
+              "action": "TURN_POWER_ON",
+              "actor": "player",
+              "parameters": {
+                "fuse_item": "fuse_1",
+                "place": "powerstation",
+                "target_place": "laboratory"
+              }
+            },
+            {
+              "step": 13,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "powerstation",
+                "to": "village"
+              }
+            },
+            {
+              "step": 14,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "village",
+                "to": "laboratory"
+              }
+            }
+          ]
+        },
+        {
+          "quest_id": "Q3",
+          "quest_title": "Synthesize and Administer the Cure",
+          "steps": [
+            {
+              "step": 15,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "laboratory",
+                "to": "village"
+              }
+            },
+            {
+              "step": 16,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "village",
+                "to": "hospital1"
+              }
+            },
+            {
+              "step": 17,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "hospital1",
+                "to": "hospital2"
+              }
+            },
+            {
+              "step": 18,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "target": "marcus",
+                "place": "hospital2",
+                "dialogue_content": [
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Marcus, I need a sample to make a cure. Anything you can spare?"
+                  },
+                  {
+                    "speaker": "marcus",
+                    "line": "Take the sample. It might be our only shot."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Thanks. I'll bring it back."
+                  }
+                ]
+              }
+            },
+            {
+              "step": 19,
+              "action": "PICKUP",
+              "actor": "player",
+              "parameters": {
+                "item": "cure_sample_1",
+                "place": "hospital2"
+              }
+            },
+            {
+              "step": 20,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "hospital2",
+                "to": "village"
+              }
+            },
+            {
+              "step": 21,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "village",
+                "to": "laboratory"
+              }
+            },
+            {
+              "step": 22,
+              "action": "SYNTHESIZE_CURE",
+              "actor": "player",
+              "parameters": {
+                "place": "laboratory"
+              }
+            },
+            {
+              "step": 23,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "target": "sarah",
+                "place": "laboratory",
+                "dialogue_content": [
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Sarah, I have a cure. Let me help you."
+                  },
+                  {
+                    "speaker": "sarah",
+                    "line": "Finally... administer it, and maybe we can stop this."
+                  }
+                ]
+              }
+            },
+            {
+              "step": 24,
+              "action": "USE_CURE",
+              "actor": "player",
+              "parameters": {
+                "item": "antidote_1",
+                "target": "sarah"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "model": "GPT-OSS-120B",
+    "run": 10,
+    "chapter_id": "C2",
+    "quest_data": {
+      "chapter_id": "C2",
+      "chapter_title": "Strings of the Shadow",
+      "quest_type": "main",
+      "required": true,
+      "scale": "large",
+      "quests": [
+        {
+          "quest_id": "Q1",
+          "quest_title": "Whispers in the Store",
+          "steps": [
+            {
+              "step": 1,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "laboratory",
+                "to": "village"
+              }
+            },
+            {
+              "step": 2,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "village",
+                "to": "store"
+              }
+            },
+            {
+              "step": 3,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "target": "Anne",
+                "place": "store",
+                "dialogue_content": [
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Anne, I've got a feeling someone's pulling the strings on this island."
+                  },
+                  {
+                    "speaker": "Anne",
+                    "line": "You're not the first to suspect that. I heard a rumor about a key hidden in the cave, something that opens the outpost."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "An outpost? Could that be where the Doctor or Viktor are?"
+                  },
+                  {
+                    "speaker": "Anne",
+                    "line": "Possibly. The key is called outpost_key_1. If you find it, you might get inside and see who's really pulling the strings."
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "quest_id": "Q2",
+          "quest_title": "Unlocking the Outpost",
+          "steps": [
+            {
+              "step": 4,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "store",
+                "to": "village"
+              }
+            },
+            {
+              "step": 5,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "village",
+                "to": "cave"
+              }
+            },
+            {
+              "step": 6,
+              "action": "PICKUP",
+              "actor": "player",
+              "parameters": {
+                "item": "outpost_key_1",
+                "place": "cave"
+              }
+            },
+            {
+              "step": 7,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "cave",
+                "to": "village"
+              }
+            },
+            {
+              "step": 8,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "village",
+                "to": "outpost1"
+              }
+            },
+            {
+              "step": 9,
+              "action": "UNLOCK",
+              "actor": "player",
+              "parameters": {
+                "key_item": "outpost_key_1",
+                "target_place": "outpost1"
+              }
+            },
+            {
+              "step": 10,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "outpost1",
+                "to": "outpost2"
+              }
+            },
+            {
+              "step": 11,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "outpost2",
+                "to": "outpost3"
+              }
+            },
+            {
+              "step": 12,
+              "action": "PICKUP",
+              "actor": "player",
+              "parameters": {
+                "item": "toolkit_1",
+                "place": "outpost3"
+              }
+            },
+            {
+              "step": 13,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "outpost3",
+                "to": "village"
+              }
+            },
+            {
+              "step": 14,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "village",
+                "to": "powerstation"
+              }
+            },
+            {
+              "step": 15,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "target": "George",
+                "place": "powerstation",
+                "dialogue_content": [
+                  {
+                    "speaker": "PLAYER",
+                    "line": "George, I need a fuse to keep the lab powered while I investigate the outpost."
+                  },
+                  {
+                    "speaker": "George",
+                    "line": "The grid's low on spares, but I have one hidden in the outpost's maintenance locker."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Can you give it to me?"
+                  },
+                  {
+                    "speaker": "George",
+                    "line": "Take it from the locker; it's labeled fuse_1."
+                  }
+                ]
+              }
+            },
+            {
+              "step": 16,
+              "action": "PICKUP",
+              "actor": "player",
+              "parameters": {
+                "item": "fuse_1",
+                "place": "powerstation"
+              }
+            },
+            {
+              "step": 17,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "powerstation",
+                "to": "laboratory"
+              }
+            },
+            {
+              "step": 18,
+              "action": "TURN_POWER_ON",
+              "actor": "player",
+              "parameters": {
+                "fuse_item": "fuse_1",
+                "place": "powerstation",
+                "target_place": "laboratory"
+              }
+            },
+            {
+              "step": 19,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "target": "Sarah",
+                "place": "laboratory",
+                "dialogue_content": [
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Sarah, the power's back. Any sign of who\u2019s behind the experiments?"
+                  },
+                  {
+                    "speaker": "Sarah",
+                    "line": "The Doctor's notes hint at a benefactor\u2014someone orchestrating from the outpost."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "We need to confront him."
+                  },
+                  {
+                    "speaker": "Sarah",
+                    "line": "Be careful. Viktor's influence reaches there too."
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "model": "GPT-OSS-120B",
+    "run": 10,
+    "chapter_id": "C3",
+    "quest_data": {
+      "chapter_id": "C3",
+      "chapter_title": "The Last Hope in the Lab",
+      "quest_type": "main",
+      "required": true,
+      "scale": "large",
+      "quests": [
+        {
+          "quest_id": "Q1",
+          "quest_title": "A Conversation with the Scientist",
+          "steps": [
+            {
+              "step": 1,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "laboratory",
+                "to": "laboratory"
+              }
+            },
+            {
+              "step": 2,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "target": "Sarah",
+                "place": "laboratory",
+                "dialogue_content": [
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Sarah, any chance you know a way off this island?"
+                  },
+                  {
+                    "speaker": "Sarah",
+                    "line": "The only viable exit is the dock, but the village route is too dangerous now."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "So what can we do here?"
+                  },
+                  {
+                    "speaker": "Sarah",
+                    "line": "We can finish the cure. If we synthesize an antidote, we might secure a future for those who stay."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Alright, let's get that cure together."
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+]

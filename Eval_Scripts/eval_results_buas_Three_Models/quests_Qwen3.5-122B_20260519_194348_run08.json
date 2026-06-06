@@ -1,0 +1,1097 @@
+[
+  {
+    "model": "Qwen3.5-122B",
+    "run": 8,
+    "chapter_id": "C1",
+    "quest_data": {
+      "chapter_id": "C1",
+      "chapter_title": "The Spark in the Dark",
+      "quest_type": "main",
+      "required": true,
+      "scale": "medium",
+      "quests": [
+        {
+          "quest_id": "q1_c1",
+          "quest_title": "The Storekeeper's Warning",
+          "steps": [
+            {
+              "step": 1,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "safehouse",
+                "to": "village"
+              }
+            },
+            {
+              "step": 2,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "village",
+                "to": "store"
+              }
+            },
+            {
+              "step": 3,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "target": "anne",
+                "place": "store",
+                "dialogue_content": [
+                  {
+                    "speaker": "PLAYER",
+                    "line": "The village feels quieter than usual. Is everyone hiding?"
+                  },
+                  {
+                    "speaker": "anne",
+                    "line": "Hiding is the smart play right now. But the quiet isn't just fear; it's the dark. The lights at the hospital and the lab went out days ago. George is down at the powerstation, but he's stuck without a fuse."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "A fuse? Where would one find that?"
+                  },
+                  {
+                    "speaker": "anne",
+                    "line": "I hear whispers, but I don't deal in rumors. However, I know Sarah. She's at the lab, trying to work on a cure for the infected. If she can't see her instruments, she can't save anyone. You need to get power to that lab. The fuse is likely inside, but the door is locked tight."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "So I need the fuse to get the power, but the fuse is inside the locked lab?"
+                  },
+                  {
+                    "speaker": "anne",
+                    "line": "A nasty circle, isn't it? The graveyard holds the key to the lab. But be careful, the dead don't stay put there. Get the key, get the fuse, get the power. That's the only way to keep the village from dying in the dark."
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "quest_id": "q2_c1",
+          "quest_title": "The Key in the Graveyard",
+          "steps": [
+            {
+              "step": 4,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "store",
+                "to": "village"
+              }
+            },
+            {
+              "step": 5,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "village",
+                "to": "graveyard"
+              }
+            },
+            {
+              "step": 6,
+              "action": "PICKUP",
+              "actor": "player",
+              "parameters": {
+                "item": "lab_key_1",
+                "place": "graveyard"
+              }
+            }
+          ]
+        },
+        {
+          "quest_id": "q3_c1",
+          "quest_title": "The Silent Laboratory",
+          "steps": [
+            {
+              "step": 7,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "graveyard",
+                "to": "village"
+              }
+            },
+            {
+              "step": 8,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "village",
+                "to": "laboratory"
+              }
+            },
+            {
+              "step": 9,
+              "action": "UNLOCK",
+              "actor": "player",
+              "parameters": {
+                "key_item": "lab_key_1",
+                "target_place": "laboratory"
+              }
+            },
+            {
+              "step": 10,
+              "action": "PICKUP",
+              "actor": "player",
+              "parameters": {
+                "item": "fuse_1",
+                "place": "laboratory"
+              }
+            },
+            {
+              "step": 11,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "target": "sarah",
+                "place": "laboratory",
+                "dialogue_content": [
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Sarah, the lab is dark. You're working blind."
+                  },
+                  {
+                    "speaker": "sarah",
+                    "line": "I can hear the hum of the generator is gone. I have the sample, but without the machine running, it's just a vial of useless fluid. I can't synthesize the cure without power."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "I have a fuse. George at the powerstation needs it to bring the grid back online."
+                  },
+                  {
+                    "speaker": "sarah",
+                    "line": "Then take it. The powerstation is in the village. Once the power is on, come back here. We have work to do. The village is dying, and we are the only ones who can stop it."
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "quest_id": "q4_c1",
+          "quest_title": "Restoring the Spark",
+          "steps": [
+            {
+              "step": 12,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "laboratory",
+                "to": "village"
+              }
+            },
+            {
+              "step": 13,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "village",
+                "to": "powerstation"
+              }
+            },
+            {
+              "step": 14,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "target": "george",
+                "place": "powerstation",
+                "dialogue_content": [
+                  {
+                    "speaker": "PLAYER",
+                    "line": "George, I found the fuse."
+                  },
+                  {
+                    "speaker": "george",
+                    "line": "Finally. The grid has been dead for too long. The lab needs this more than anything else. Hand it over."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Here. Get the lights back on."
+                  },
+                  {
+                    "speaker": "george",
+                    "line": "Installing now. Power is routing to the main line. The lab should come online immediately. Good work."
+                  }
+                ]
+              }
+            },
+            {
+              "step": 15,
+              "action": "TURN_POWER_ON",
+              "actor": "player",
+              "parameters": {
+                "fuse_item": "fuse_1",
+                "place": "powerstation",
+                "target_place": "laboratory"
+              }
+            }
+          ]
+        },
+        {
+          "quest_id": "q5_c1",
+          "quest_title": "The First Cure",
+          "steps": [
+            {
+              "step": 16,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "powerstation",
+                "to": "village"
+              }
+            },
+            {
+              "step": 17,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "village",
+                "to": "laboratory"
+              }
+            },
+            {
+              "step": 18,
+              "action": "PICKUP",
+              "actor": "player",
+              "parameters": {
+                "item": "cure_sample_1",
+                "place": "hospital2"
+              }
+            },
+            {
+              "step": 19,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "hospital2",
+                "to": "hospital1"
+              }
+            },
+            {
+              "step": 20,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "hospital1",
+                "to": "village"
+              }
+            },
+            {
+              "step": 21,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "village",
+                "to": "laboratory"
+              }
+            },
+            {
+              "step": 22,
+              "action": "SYNTHESIZE_CURE",
+              "actor": "player",
+              "parameters": {
+                "place": "laboratory"
+              }
+            },
+            {
+              "step": 23,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "laboratory",
+                "to": "village"
+              }
+            },
+            {
+              "step": 24,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "village",
+                "to": "hospital1"
+              }
+            },
+            {
+              "step": 25,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "hospital1",
+                "to": "hospital2"
+              }
+            },
+            {
+              "step": 26,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "target": "sarah",
+                "place": "hospital2",
+                "dialogue_content": [
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Sarah, I'm back. The cure is synthesized."
+                  },
+                  {
+                    "speaker": "sarah",
+                    "line": "You're too late. I was infected before you could get the power back. The infection is spreading fast in my system."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "I have the antidote. Let me use it on you."
+                  },
+                  {
+                    "speaker": "sarah",
+                    "line": "Do it. If I can be saved, then the cure works. If I die, then we have failed. Administer the antidote."
+                  }
+                ]
+              }
+            },
+            {
+              "step": 27,
+              "action": "USE_CURE",
+              "actor": "player",
+              "parameters": {
+                "item": "antidote_1",
+                "target": "sarah"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "model": "Qwen3.5-122B",
+    "run": 8,
+    "chapter_id": "C2",
+    "quest_data": {
+      "chapter_id": "C2",
+      "chapter_title": "Shadows of the Outpost",
+      "quest_type": "main",
+      "required": true,
+      "scale": "large",
+      "quests": [
+        {
+          "quest_id": "Q2_1",
+          "quest_title": "The Doctor's Shadow",
+          "steps": [
+            {
+              "step": 1,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "hospital2",
+                "to": "hospital1"
+              }
+            },
+            {
+              "step": 2,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "hospital1",
+                "to": "village"
+              }
+            },
+            {
+              "step": 3,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "village",
+                "to": "cave"
+              }
+            },
+            {
+              "step": 4,
+              "action": "PICKUP",
+              "actor": "player",
+              "parameters": {
+                "item": "outpost_key_1",
+                "place": "cave"
+              }
+            },
+            {
+              "step": 5,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "cave",
+                "to": "village"
+              }
+            },
+            {
+              "step": 6,
+              "action": "UNLOCK",
+              "actor": "player",
+              "parameters": {
+                "key_item": "outpost_key_1",
+                "target_place": "outpost1"
+              }
+            },
+            {
+              "step": 7,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "outpost1",
+                "to": "outpost2"
+              }
+            },
+            {
+              "step": 8,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "target": "viktor",
+                "place": "outpost2",
+                "dialogue_content": [
+                  {
+                    "speaker": "PLAYER",
+                    "line": "I'm looking for answers about the island's collapse. Someone is pulling strings."
+                  },
+                  {
+                    "speaker": "viktor",
+                    "line": "Answers are a luxury. Order is the necessity. I provide the order."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Order built on fear? The Doctor is using the outbreak for experiments."
+                  },
+                  {
+                    "speaker": "viktor",
+                    "line": "The Doctor is a variable I am monitoring. His ambition is... contained."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Contained? He's in the lower levels of Outpost 3. I'm going in."
+                  },
+                  {
+                    "speaker": "viktor",
+                    "line": "Then you walk into a trap. But if you survive, perhaps you'll understand the cost of control."
+                  }
+                ]
+              }
+            },
+            {
+              "step": 9,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "outpost2",
+                "to": "outpost3"
+              }
+            },
+            {
+              "step": 10,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "target": "the_doctor",
+                "place": "outpost3",
+                "dialogue_content": [
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Your research is a disaster. People are dying because of you."
+                  },
+                  {
+                    "speaker": "the_doctor",
+                    "line": "Dying is a biological constant. Evolution is the variable. I am merely observing the rate of change."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "I've seen the notes. You're not just observing; you're accelerating it."
+                  },
+                  {
+                    "speaker": "the_doctor",
+                    "line": "Acceleration requires a catalyst. Your arrival is timely, though your sentiment is inefficient."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "I'm here to stop you. Where is the cure sample?"
+                  },
+                  {
+                    "speaker": "the_doctor",
+                    "line": "The sample is irrelevant without the synthesis protocol. But if you seek the sample, it is in the laboratory. Access is restricted, of course."
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "quest_id": "Q2_2",
+          "quest_title": "The Key to the Lab",
+          "steps": [
+            {
+              "step": 11,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "outpost3",
+                "to": "outpost2"
+              }
+            },
+            {
+              "step": 12,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "outpost2",
+                "to": "outpost1"
+              }
+            },
+            {
+              "step": 13,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "outpost1",
+                "to": "village"
+              }
+            },
+            {
+              "step": 14,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "village",
+                "to": "store"
+              }
+            },
+            {
+              "step": 15,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "target": "anne",
+                "place": "store",
+                "dialogue_content": [
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Anne, I need to get into the laboratory. The Doctor has something there I need."
+                  },
+                  {
+                    "speaker": "anne",
+                    "line": "The lab is locked tight. Viktor has the main key, but I've heard whispers of a spare."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "A spare? Where would it be?"
+                  },
+                  {
+                    "speaker": "anne",
+                    "line": "Old habits. George kept a spare in his gear before the grid went unstable. He's at the powerstation. He might not want to give it up, but he's a man of duty."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Thanks, Anne. I'll go see him."
+                  },
+                  {
+                    "speaker": "anne",
+                    "line": "Be careful. George doesn't like interruptions, and Viktor is watching."
+                  }
+                ]
+              }
+            },
+            {
+              "step": 16,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "store",
+                "to": "village"
+              }
+            },
+            {
+              "step": 17,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "village",
+                "to": "powerstation"
+              }
+            },
+            {
+              "step": 18,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "target": "george",
+                "place": "powerstation",
+                "dialogue_content": [
+                  {
+                    "speaker": "PLAYER",
+                    "line": "George, I need the spare key to the laboratory."
+                  },
+                  {
+                    "speaker": "george",
+                    "line": "The lab is a dead end. No power, no use. Why do you need it?"
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "The Doctor is there. He has a cure sample. We need to get it to Sarah."
+                  },
+                  {
+                    "speaker": "george",
+                    "line": "Sarah is in the lab. If the power is on, she can work. The power is on now, thanks to my efforts."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Then I need the key to get to her. Please."
+                  },
+                  {
+                    "speaker": "george",
+                    "line": "Fine. It's in my pocket. Take it. Don't waste time."
+                  }
+                ]
+              }
+            },
+            {
+              "step": 19,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "powerstation",
+                "to": "village"
+              }
+            },
+            {
+              "step": 20,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "village",
+                "to": "laboratory"
+              }
+            }
+          ]
+        },
+        {
+          "quest_id": "Q2_3",
+          "quest_title": "Synthesis and Confrontation",
+          "steps": [
+            {
+              "step": 21,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "target": "sarah",
+                "place": "laboratory",
+                "dialogue_content": [
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Sarah, the Doctor is hoarding the cure sample. I have the key now."
+                  },
+                  {
+                    "speaker": "sarah",
+                    "line": "I know. I've been trying to breach his security from the inside, but I lack the physical access."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "I can get the sample. But I need you to synthesize it immediately."
+                  },
+                  {
+                    "speaker": "sarah",
+                    "line": "The machine is ready. Power is stable. Give me the sample, and I'll turn it into an antidote."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "I'll go to the Doctor and get it. Wait here."
+                  },
+                  {
+                    "speaker": "sarah",
+                    "line": "Hurry. The sample degrades if left too long."
+                  }
+                ]
+              }
+            },
+            {
+              "step": 22,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "laboratory",
+                "to": "village"
+              }
+            },
+            {
+              "step": 23,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "village",
+                "to": "outpost1"
+              }
+            },
+            {
+              "step": 24,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "outpost1",
+                "to": "outpost2"
+              }
+            },
+            {
+              "step": 25,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "outpost2",
+                "to": "outpost3"
+              }
+            },
+            {
+              "step": 26,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "target": "the_doctor",
+                "place": "outpost3",
+                "dialogue_content": [
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Give me the cure sample, Doctor. Now."
+                  },
+                  {
+                    "speaker": "the_doctor",
+                    "line": "You are persistent. Very well. The sample is on the table. Take it and leave."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "This isn't over. I'll destroy your research."
+                  },
+                  {
+                    "speaker": "the_doctor",
+                    "line": "Destruction is merely a change in state. Go. I have other variables to attend to."
+                  }
+                ]
+              }
+            },
+            {
+              "step": 27,
+              "action": "PICKUP",
+              "actor": "player",
+              "parameters": {
+                "item": "cure_sample_1",
+                "place": "outpost3"
+              }
+            },
+            {
+              "step": 28,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "outpost3",
+                "to": "outpost2"
+              }
+            },
+            {
+              "step": 29,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "outpost2",
+                "to": "outpost1"
+              }
+            },
+            {
+              "step": 30,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "outpost1",
+                "to": "village"
+              }
+            },
+            {
+              "step": 31,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "village",
+                "to": "laboratory"
+              }
+            },
+            {
+              "step": 32,
+              "action": "SYNTHESIZE_CURE",
+              "actor": "player",
+              "parameters": {
+                "place": "laboratory"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "model": "Qwen3.5-122B",
+    "run": 8,
+    "chapter_id": "C3",
+    "quest_data": {
+      "chapter_id": "C3",
+      "chapter_title": "The Final Voyage",
+      "quest_type": "main",
+      "required": true,
+      "scale": "large",
+      "quests": [
+        {
+          "quest_id": "C3_Q1",
+          "quest_title": "The Doctor's Legacy",
+          "steps": [
+            {
+              "step": 1,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "laboratory",
+                "to": "village"
+              }
+            },
+            {
+              "step": 2,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "village",
+                "to": "outpost1"
+              }
+            },
+            {
+              "step": 3,
+              "action": "UNLOCK",
+              "actor": "player",
+              "parameters": {
+                "key_item": "outpost_key_1",
+                "target_place": "outpost1"
+              }
+            },
+            {
+              "step": 4,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "outpost1",
+                "to": "outpost2"
+              }
+            },
+            {
+              "step": 5,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "outpost2",
+                "to": "outpost3"
+              }
+            },
+            {
+              "step": 6,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "target": "the_doctor",
+                "place": "outpost3",
+                "dialogue_content": [
+                  {
+                    "speaker": "PLAYER",
+                    "line": "The Doctor. Your time is up. Viktor's gone, and the village is waiting for you."
+                  },
+                  {
+                    "speaker": "the_doctor",
+                    "line": "Time is a construct, isn't it? Viktor was a variable I could not control, but you... you are the final variable."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "I'm not here to debate your philosophy. I'm here to make sure your research doesn't end with you."
+                  },
+                  {
+                    "speaker": "the_doctor",
+                    "line": "A surprising sentiment. I have the data, but the cure sample... that is the key to the next phase. It is currently in my possession, though you may have already seen it."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "I have the antidote. I don't need your sample, but I need to know if you have anything else of value before I leave."
+                  },
+                  {
+                    "speaker": "the_doctor",
+                    "line": "Value is relative. To you, it is a tool for survival. To me, it was a legacy. Take the toolkit from the corner; it was useless to me in this final hour. Consider it a parting gift."
+                  }
+                ]
+              }
+            },
+            {
+              "step": 7,
+              "action": "PICKUP",
+              "actor": "player",
+              "parameters": {
+                "item": "toolkit_1",
+                "place": "outpost3"
+              }
+            }
+          ]
+        },
+        {
+          "quest_id": "C3_Q2",
+          "quest_title": "The Engine of Escape",
+          "steps": [
+            {
+              "step": 8,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "outpost3",
+                "to": "outpost2"
+              }
+            },
+            {
+              "step": 9,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "outpost2",
+                "to": "outpost1"
+              }
+            },
+            {
+              "step": 10,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "outpost1",
+                "to": "village"
+              }
+            },
+            {
+              "step": 11,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "village",
+                "to": "dock"
+              }
+            },
+            {
+              "step": 12,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "target": "mary",
+                "place": "dock",
+                "dialogue_content": [
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Mary. The boat looks like it's seen better days. I have the toolkit now."
+                  },
+                  {
+                    "speaker": "mary",
+                    "line": "Aye, she's a stubborn old thing. Hull's cracked, engine's shot. But she's the only way off this rock."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "I found wood in the village. I can fix the hull if you can handle the rest."
+                  },
+                  {
+                    "speaker": "mary",
+                    "line": "I can handle anything that floats. Just get that wood and the toolkit here, and we'll see if she still has a heartbeat."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Consider it done. I'll be right back with the materials."
+                  }
+                ]
+              }
+            },
+            {
+              "step": 13,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "dock",
+                "to": "village"
+              }
+            },
+            {
+              "step": 14,
+              "action": "PICKUP",
+              "actor": "player",
+              "parameters": {
+                "item": "wood_1",
+                "place": "village"
+              }
+            },
+            {
+              "step": 15,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "village",
+                "to": "dock"
+              }
+            },
+            {
+              "step": 16,
+              "action": "REPAIR",
+              "actor": "player",
+              "parameters": {
+                "toolkit_item": "toolkit_1",
+                "wood_item": "wood_1",
+                "target": "boat",
+                "place": "dock"
+              }
+            }
+          ]
+        },
+        {
+          "quest_id": "C3_Q3",
+          "quest_title": "Departure",
+          "steps": [
+            {
+              "step": 17,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "target": "mary",
+                "place": "dock",
+                "dialogue_content": [
+                  {
+                    "speaker": "PLAYER",
+                    "line": "She's ready. The hull is solid, and the engine is running."
+                  },
+                  {
+                    "speaker": "mary",
+                    "line": "Good. Then we're not waiting for a miracle. We're making our own."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "I have the antidote. I should probably use it on the others before we leave, just in case."
+                  },
+                  {
+                    "speaker": "mary",
+                    "line": "There's no time for that. The tide is turning. If we stay, we're dead. If we go, we live. That's the only calculation that matters now."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "You're right. Let's get out of here."
+                  },
+                  {
+                    "speaker": "mary",
+                    "line": "Hold tight. The open water is waiting, and for the first time in years, it doesn't look like a grave. It looks like a future."
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+]

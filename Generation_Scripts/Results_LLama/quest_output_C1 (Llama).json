@@ -1,0 +1,203 @@
+{
+  "chapter_id": "C1",
+  "chapter_title": "Survival and Discovery",
+  "quest_type": "main",
+  "required": true,
+  "scale": "medium",
+  "quests": [
+    {
+      "quest_id": "Q1",
+      "quest_title": "Gathering Information",
+      "steps": [
+        {
+          "step": 1,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "safehouse",
+            "to": "store"
+          }
+        },
+        {
+          "step": 2,
+          "action": "TALK",
+          "actor": "player",
+          "parameters": {
+            "target": "anne",
+            "place": "store",
+            "dialogue_content": [
+              {
+                "speaker": "PLAYER",
+                "line": "Anne, what's the situation like in the village?"
+              },
+              {
+                "speaker": "anne",
+                "line": "It's bad. People are scared, and we're running low on supplies. But I've heard rumors of a possible cure."
+              },
+              {
+                "speaker": "PLAYER",
+                "line": "A cure? What do you know about it?"
+              },
+              {
+                "speaker": "anne",
+                "line": "Not much, but I think Sarah might know more. She's been working on something at the laboratory."
+              }
+            ]
+          }
+        },
+        {
+          "step": 3,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "store",
+            "to": "village"
+          }
+        },
+        {
+          "step": 4,
+          "action": "PICKUP",
+          "actor": "player",
+          "parameters": {
+            "item": "wood_1",
+            "place": "village"
+          }
+        }
+      ]
+    },
+    {
+      "quest_id": "Q2",
+      "quest_title": "Unlocking the Laboratory",
+      "steps": [
+        {
+          "step": 5,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "village",
+            "to": "graveyard"
+          }
+        },
+        {
+          "step": 6,
+          "action": "PICKUP",
+          "actor": "player",
+          "parameters": {
+            "item": "lab_key_1",
+            "place": "graveyard"
+          }
+        },
+        {
+          "step": 7,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "graveyard",
+            "to": "village"
+          }
+        },
+        {
+          "step": 8,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "village",
+            "to": "laboratory"
+          }
+        },
+        {
+          "step": 9,
+          "action": "UNLOCK",
+          "actor": "player",
+          "parameters": {
+            "key_item": "lab_key_1",
+            "target_place": "laboratory"
+          }
+        },
+        {
+          "step": 10,
+          "action": "TALK",
+          "actor": "player",
+          "parameters": {
+            "target": "sarah",
+            "place": "laboratory",
+            "dialogue_content": [
+              {
+                "speaker": "PLAYER",
+                "line": "Sarah, I've heard you're working on a cure. Can you tell me more?"
+              },
+              {
+                "speaker": "sarah",
+                "line": "Yes, I am. But I need a cure sample to continue my research. It's located in hospital2, but I'm too weak to get it myself."
+              },
+              {
+                "speaker": "PLAYER",
+                "line": "Don't worry, I'll get it for you."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "quest_id": "Q3",
+      "quest_title": "Retrieving the Cure Sample",
+      "steps": [
+        {
+          "step": 11,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "laboratory",
+            "to": "village"
+          }
+        },
+        {
+          "step": 12,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "village",
+            "to": "hospital1"
+          }
+        },
+        {
+          "step": 13,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "hospital1",
+            "to": "hospital2"
+          }
+        },
+        {
+          "step": 14,
+          "action": "PICKUP",
+          "actor": "player",
+          "parameters": {
+            "item": "cure_sample_1",
+            "place": "hospital2"
+          }
+        },
+        {
+          "step": 15,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "hospital2",
+            "to": "village"
+          }
+        },
+        {
+          "step": 16,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "village",
+            "to": "laboratory"
+          }
+        }
+      ]
+    }
+  ]
+}

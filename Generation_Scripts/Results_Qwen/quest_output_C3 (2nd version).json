@@ -1,0 +1,109 @@
+{
+  "chapter_id": "C3",
+  "chapter_title": "The Last Escape",
+  "quest_type": "main",
+  "required": true,
+  "scale": "large",
+  "quests": [
+    {
+      "quest_id": "C3_Q1",
+      "quest_title": "Gather Supplies for the Boat",
+      "steps": [
+        {
+          "step": 1,
+          "action": "PICKUP",
+          "actor": "player",
+          "parameters": {
+            "item": "wood_1",
+            "place": "village"
+          }
+        },
+        {
+          "step": 2,
+          "action": "PICKUP",
+          "actor": "player",
+          "parameters": {
+            "item": "wood_2",
+            "place": "village"
+          }
+        },
+        {
+          "step": 3,
+          "action": "PICKUP",
+          "actor": "player",
+          "parameters": {
+            "item": "wood_3",
+            "place": "village"
+          }
+        }
+      ]
+    },
+    {
+      "quest_id": "C3_Q2",
+      "quest_title": "Meet Mary at the Dock",
+      "steps": [
+        {
+          "step": 4,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "village",
+            "to": "dock"
+          }
+        },
+        {
+          "step": 5,
+          "action": "TALK",
+          "actor": "player",
+          "parameters": {
+            "target": "mary",
+            "place": "dock",
+            "dialogue_content": [
+              {
+                "speaker": "PLAYER",
+                "line": "Mary, I've got what you need to get this boat seaworthy again."
+              },
+              {
+                "speaker": "mary",
+                "line": "You have wood and a toolkit? That's more than I expected from this island."
+              },
+              {
+                "speaker": "PLAYER",
+                "line": "I can repair the boat. But I need to know - will you take me off this island?"
+              },
+              {
+                "speaker": "mary",
+                "line": "The boat's got room for one more. Once it's fixed, we leave. No delays, no arguments."
+              },
+              {
+                "speaker": "PLAYER",
+                "line": "Deal. Let me get to work."
+              },
+              {
+                "speaker": "mary",
+                "line": "Make it quick. The longer we sit here, the more I worry about what's coming."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "quest_id": "C3_Q3",
+      "quest_title": "Repair the Escape Boat",
+      "steps": [
+        {
+          "step": 6,
+          "action": "REPAIR",
+          "actor": "player",
+          "parameters": {
+            "toolkit_item": "toolkit_1",
+            "wood_item": "wood_1",
+            "target": "boat",
+            "place": "dock"
+          }
+        }
+      ]
+    }
+  ]
+}

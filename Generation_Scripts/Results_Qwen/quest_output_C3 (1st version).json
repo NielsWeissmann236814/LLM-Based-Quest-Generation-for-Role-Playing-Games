@@ -1,0 +1,296 @@
+{
+  "chapter_id": "C3",
+  "chapter_title": "The Way Off",
+  "quest_type": "main",
+  "required": true,
+  "scale": "large",
+  "quests": [
+    {
+      "quest_id": "C3_Q1",
+      "quest_title": "A Cure for Sarah",
+      "steps": [
+        {
+          "step": 1,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "hospital2",
+            "to": "hospital1"
+          }
+        },
+        {
+          "step": 2,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "hospital1",
+            "to": "village"
+          }
+        },
+        {
+          "step": 3,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "village",
+            "to": "laboratory"
+          }
+        },
+        {
+          "step": 4,
+          "action": "TALK",
+          "actor": "player",
+          "parameters": {
+            "target": "sarah",
+            "place": "laboratory",
+            "dialogue_content": [
+              {
+                "speaker": "PLAYER",
+                "line": "Sarah, I have the cure sample. We can fix this."
+              },
+              {
+                "speaker": "sarah",
+                "line": "The data confirms it should work. But the synthesis process must be precise."
+              },
+              {
+                "speaker": "PLAYER",
+                "line": "I'll handle the machine. You just stay calm."
+              },
+              {
+                "speaker": "sarah",
+                "line": "Calm is a luxury I can't afford right now. But I trust you to get this right."
+              }
+            ]
+          }
+        },
+        {
+          "step": 5,
+          "action": "SYNTHESIZE_CURE",
+          "actor": "player",
+          "parameters": {
+            "place": "laboratory"
+          }
+        },
+        {
+          "step": 6,
+          "action": "TALK",
+          "actor": "player",
+          "parameters": {
+            "target": "sarah",
+            "place": "laboratory",
+            "dialogue_content": [
+              {
+                "speaker": "PLAYER",
+                "line": "The antidote is ready. This will clear the infection."
+              },
+              {
+                "speaker": "sarah",
+                "line": "Then there's still hope for the rest of us. Do it."
+              },
+              {
+                "speaker": "PLAYER",
+                "line": "This might sting, but you'll be back to full strength."
+              },
+              {
+                "speaker": "sarah",
+                "line": "Just get it done. I have work to do once I'm clear."
+              }
+            ]
+          }
+        },
+        {
+          "step": 7,
+          "action": "USE_CURE",
+          "actor": "player",
+          "parameters": {
+            "item": "antidote",
+            "target": "sarah"
+          }
+        }
+      ]
+    },
+    {
+      "quest_id": "C3_Q2",
+      "quest_title": "The Toolkit",
+      "steps": [
+        {
+          "step": 8,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "laboratory",
+            "to": "village"
+          }
+        },
+        {
+          "step": 9,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "village",
+            "to": "outpost1"
+          }
+        },
+        {
+          "step": 10,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "outpost1",
+            "to": "outpost2"
+          }
+        },
+        {
+          "step": 11,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "outpost2",
+            "to": "outpost3"
+          }
+        },
+        {
+          "step": 12,
+          "action": "PICKUP",
+          "actor": "player",
+          "parameters": {
+            "item": "toolkit_1",
+            "place": "outpost3"
+          }
+        },
+        {
+          "step": 13,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "outpost3",
+            "to": "outpost2"
+          }
+        },
+        {
+          "step": 14,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "outpost2",
+            "to": "outpost1"
+          }
+        },
+        {
+          "step": 15,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "outpost1",
+            "to": "village"
+          }
+        },
+        {
+          "step": 16,
+          "action": "PICKUP",
+          "actor": "player",
+          "parameters": {
+            "item": "wood_1",
+            "place": "village"
+          }
+        }
+      ]
+    },
+    {
+      "quest_id": "C3_Q3",
+      "quest_title": "Escape Route",
+      "steps": [
+        {
+          "step": 17,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "village",
+            "to": "dock"
+          }
+        },
+        {
+          "step": 18,
+          "action": "TALK",
+          "actor": "player",
+          "parameters": {
+            "target": "mary",
+            "place": "dock",
+            "dialogue_content": [
+              {
+                "speaker": "PLAYER",
+                "line": "Mary, I've got what you need to fix the boat."
+              },
+              {
+                "speaker": "mary",
+                "line": "Better not be wasting my time. That hull's been sitting broken too long."
+              },
+              {
+                "speaker": "PLAYER",
+                "line": "Got the toolkit and wood. We can get this seaworthy."
+              },
+              {
+                "speaker": "mary",
+                "line": "Then get to work. And when we leave, I'm taking anyone who's ready."
+              },
+              {
+                "speaker": "PLAYER",
+                "line": "That's the plan. Sarah's safe, now we get out."
+              },
+              {
+                "speaker": "mary",
+                "line": "Good. I've been waiting for this moment for weeks."
+              }
+            ]
+          }
+        },
+        {
+          "step": 19,
+          "action": "REPAIR",
+          "actor": "player",
+          "parameters": {
+            "toolkit_item": "toolkit_1",
+            "wood_item": "wood_1",
+            "target": "boat",
+            "place": "dock"
+          }
+        },
+        {
+          "step": 20,
+          "action": "TALK",
+          "actor": "player",
+          "parameters": {
+            "target": "mary",
+            "place": "dock",
+            "dialogue_content": [
+              {
+                "speaker": "PLAYER",
+                "line": "The boat's ready. We can leave anytime now."
+              },
+              {
+                "speaker": "mary",
+                "line": "Then we leave now. No more waiting on this hellhole."
+              },
+              {
+                "speaker": "PLAYER",
+                "line": "Sarah's cured. The others can follow if they want."
+              },
+              {
+                "speaker": "mary",
+                "line": "Tell them to get to the dock. We're not leaving anyone behind who's ready to go."
+              },
+              {
+                "speaker": "PLAYER",
+                "line": "It's time. Let's go."
+              },
+              {
+                "speaker": "mary",
+                "line": "Finally. I've been dreaming of open water for too long."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

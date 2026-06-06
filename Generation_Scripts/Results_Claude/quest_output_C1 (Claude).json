@@ -1,0 +1,404 @@
+{
+  "chapter_id": "C1",
+  "chapter_title": "Embers of the Village",
+  "quest_type": "main",
+  "required": true,
+  "scale": "medium",
+  "quests": [
+    {
+      "quest_id": "C1Q1",
+      "quest_title": "Word from the Store",
+      "steps": [
+        {
+          "step": 1,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "safehouse",
+            "to": "village"
+          }
+        },
+        {
+          "step": 2,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "village",
+            "to": "store"
+          }
+        },
+        {
+          "step": 3,
+          "action": "TALK",
+          "actor": "player",
+          "parameters": {
+            "target": "anne",
+            "place": "store",
+            "dialogue_content": [
+              {
+                "speaker": "PLAYER",
+                "line": "Anne. The village is falling apart. I need to know what's still possible."
+              },
+              {
+                "speaker": "anne",
+                "line": "Possible is a strong word these days. But there's talk. Sarah was working on a cure over at the laboratory before she went quiet."
+              },
+              {
+                "speaker": "PLAYER",
+                "line": "Went quiet how?"
+              },
+              {
+                "speaker": "anne",
+                "line": "The kind of quiet that means infected. The lab's locked tight too. No power, no key. George says the key got buried with the last man who held it \u2014 graveyard, if you've the stomach."
+              },
+              {
+                "speaker": "PLAYER",
+                "line": "And the power?"
+              },
+              {
+                "speaker": "anne",
+                "line": "Fuse is inside the lab itself. Classic. George at the powerstation can wire it back in once you've got it. One more thing \u2014 a cure needs a sample. There's one at the old hospital. Marcus is holed up there. He won't shoot you if you don't give him reason."
+              },
+              {
+                "speaker": "PLAYER",
+                "line": "Thank you, Anne."
+              },
+              {
+                "speaker": "anne",
+                "line": "Don't thank me yet. Just come back breathing."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "quest_id": "C1Q2",
+      "quest_title": "A Sample from the Hospital",
+      "steps": [
+        {
+          "step": 4,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "store",
+            "to": "village"
+          }
+        },
+        {
+          "step": 5,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "village",
+            "to": "hospital1"
+          }
+        },
+        {
+          "step": 6,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "hospital1",
+            "to": "hospital2"
+          }
+        },
+        {
+          "step": 7,
+          "action": "TALK",
+          "actor": "player",
+          "parameters": {
+            "target": "marcus",
+            "place": "hospital2",
+            "dialogue_content": [
+              {
+                "speaker": "marcus",
+                "line": "Far enough. State your business."
+              },
+              {
+                "speaker": "PLAYER",
+                "line": "Sarah's cure sample. Anne said it was here."
+              },
+              {
+                "speaker": "marcus",
+                "line": "It is. Vial on the tray. Don't break it."
+              },
+              {
+                "speaker": "PLAYER",
+                "line": "You're not coming?"
+              },
+              {
+                "speaker": "marcus",
+                "line": "Holding this position. Someone has to. Take it and go \u2014 and don't waste it."
+              }
+            ]
+          }
+        },
+        {
+          "step": 8,
+          "action": "PICKUP",
+          "actor": "player",
+          "parameters": {
+            "item": "cure_sample_1",
+            "place": "hospital2"
+          }
+        }
+      ]
+    },
+    {
+      "quest_id": "C1Q3",
+      "quest_title": "The Key in the Graveyard",
+      "steps": [
+        {
+          "step": 9,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "hospital2",
+            "to": "hospital1"
+          }
+        },
+        {
+          "step": 10,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "hospital1",
+            "to": "village"
+          }
+        },
+        {
+          "step": 11,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "village",
+            "to": "powerstation"
+          }
+        },
+        {
+          "step": 12,
+          "action": "TALK",
+          "actor": "player",
+          "parameters": {
+            "target": "george",
+            "place": "powerstation",
+            "dialogue_content": [
+              {
+                "speaker": "PLAYER",
+                "line": "George. I need the laboratory back on the grid."
+              },
+              {
+                "speaker": "george",
+                "line": "Lab's offline. Blown fuse inside. Bring me a new one and I'll route the power."
+              },
+              {
+                "speaker": "PLAYER",
+                "line": "Where do I find one?"
+              },
+              {
+                "speaker": "george",
+                "line": "Spare's in the lab itself. Get inside, grab it, bring it here. Simple."
+              },
+              {
+                "speaker": "PLAYER",
+                "line": "Lab's locked. Key's in the graveyard."
+              },
+              {
+                "speaker": "george",
+                "line": "Then start digging."
+              }
+            ]
+          }
+        },
+        {
+          "step": 13,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "powerstation",
+            "to": "village"
+          }
+        },
+        {
+          "step": 14,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "village",
+            "to": "graveyard"
+          }
+        },
+        {
+          "step": 15,
+          "action": "PICKUP",
+          "actor": "player",
+          "parameters": {
+            "item": "lab_key_1",
+            "place": "graveyard"
+          }
+        }
+      ]
+    },
+    {
+      "quest_id": "C1Q4",
+      "quest_title": "Power to the Lab",
+      "steps": [
+        {
+          "step": 16,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "graveyard",
+            "to": "village"
+          }
+        },
+        {
+          "step": 17,
+          "action": "UNLOCK",
+          "actor": "player",
+          "parameters": {
+            "key_item": "lab_key_1",
+            "target_place": "laboratory"
+          }
+        },
+        {
+          "step": 18,
+          "action": "PICKUP",
+          "actor": "player",
+          "parameters": {
+            "item": "fuse_1",
+            "place": "laboratory"
+          }
+        },
+        {
+          "step": 19,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "laboratory",
+            "to": "village"
+          }
+        },
+        {
+          "step": 20,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "village",
+            "to": "powerstation"
+          }
+        },
+        {
+          "step": 21,
+          "action": "TALK",
+          "actor": "player",
+          "parameters": {
+            "target": "george",
+            "place": "powerstation",
+            "dialogue_content": [
+              {
+                "speaker": "PLAYER",
+                "line": "Got your fuse."
+              },
+              {
+                "speaker": "george",
+                "line": "Hand it here. I'll wire the lab line directly."
+              },
+              {
+                "speaker": "PLAYER",
+                "line": "How long?"
+              },
+              {
+                "speaker": "george",
+                "line": "Long as it takes. Stand back."
+              }
+            ]
+          }
+        },
+        {
+          "step": 22,
+          "action": "TURN_POWER_ON",
+          "actor": "player",
+          "parameters": {
+            "fuse_item": "fuse_1",
+            "place": "powerstation",
+            "target_place": "laboratory"
+          }
+        }
+      ]
+    },
+    {
+      "quest_id": "C1Q5",
+      "quest_title": "The Cure and the Chemist",
+      "steps": [
+        {
+          "step": 23,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "powerstation",
+            "to": "village"
+          }
+        },
+        {
+          "step": 24,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "village",
+            "to": "laboratory"
+          }
+        },
+        {
+          "step": 25,
+          "action": "TALK",
+          "actor": "player",
+          "parameters": {
+            "target": "sarah",
+            "place": "laboratory",
+            "dialogue_content": [
+              {
+                "speaker": "sarah",
+                "line": "You shouldn't be in here. I'm... not what I was a day ago."
+              },
+              {
+                "speaker": "PLAYER",
+                "line": "I have your sample. Power's back on. Tell me how to finish it."
+              },
+              {
+                "speaker": "sarah",
+                "line": "The synthesis rig. Load the sample, run the cycle. The output is the antidote. It works on me \u2014 I've checked the math more times than I should admit."
+              },
+              {
+                "speaker": "PLAYER",
+                "line": "Then hold on. I'm going to fix this."
+              },
+              {
+                "speaker": "sarah",
+                "line": "Be quick. I'd rather be cured than studied."
+              }
+            ]
+          }
+        },
+        {
+          "step": 26,
+          "action": "SYNTHESIZE_CURE",
+          "actor": "player",
+          "parameters": {
+            "place": "laboratory"
+          }
+        },
+        {
+          "step": 27,
+          "action": "USE_CURE",
+          "actor": "player",
+          "parameters": {
+            "item": "antidote_1",
+            "target": "sarah"
+          }
+        }
+      ]
+    }
+  ]
+}

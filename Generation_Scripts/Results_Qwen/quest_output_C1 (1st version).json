@@ -1,0 +1,189 @@
+{
+  "chapter_id": "C1",
+  "chapter_title": "The Dying Village",
+  "quest_type": "main",
+  "required": true,
+  "scale": "medium",
+  "quests": [
+    {
+      "quest_id": "Q1",
+      "quest_title": "First Contact",
+      "steps": [
+        {
+          "step": 1,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "safehouse",
+            "to": "village"
+          }
+        },
+        {
+          "step": 2,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "village",
+            "to": "store"
+          }
+        },
+        {
+          "step": 3,
+          "action": "TALK",
+          "actor": "player",
+          "parameters": {
+            "target": "anne",
+            "place": "store",
+            "dialogue_content": [
+              {
+                "speaker": "PLAYER",
+                "line": "Anne, what's happening to the village?"
+              },
+              {
+                "speaker": "anne",
+                "line": "People are falling sick. Sarah's been infected at the laboratory. It's spreading faster than anyone expected."
+              },
+              {
+                "speaker": "PLAYER",
+                "line": "Is there a cure?"
+              },
+              {
+                "speaker": "anne",
+                "line": "There might be. Sarah was working on something before she got sick. The lab has the equipment, but it's locked and has no power."
+              },
+              {
+                "speaker": "PLAYER",
+                "line": "Where do I find the key?"
+              },
+              {
+                "speaker": "anne",
+                "line": "The lab key is in the graveyard. Old burial site, north of the village. I wouldn't go there without being prepared."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "quest_id": "Q2",
+      "quest_title": "The Graveyard Key",
+      "steps": [
+        {
+          "step": 4,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "store",
+            "to": "village"
+          }
+        },
+        {
+          "step": 5,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "village",
+            "to": "graveyard"
+          }
+        },
+        {
+          "step": 6,
+          "action": "PICKUP",
+          "actor": "player",
+          "parameters": {
+            "item": "lab_key_1",
+            "place": "graveyard"
+          }
+        },
+        {
+          "step": 7,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "graveyard",
+            "to": "village"
+          }
+        }
+      ]
+    },
+    {
+      "quest_id": "Q3",
+      "quest_title": "Restoring Power",
+      "steps": [
+        {
+          "step": 8,
+          "action": "UNLOCK",
+          "actor": "player",
+          "parameters": {
+            "key_item": "lab_key_1",
+            "target_place": "laboratory"
+          }
+        },
+        {
+          "step": 9,
+          "action": "PICKUP",
+          "actor": "player",
+          "parameters": {
+            "item": "fuse_1",
+            "place": "laboratory"
+          }
+        },
+        {
+          "step": 10,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "laboratory",
+            "to": "village"
+          }
+        },
+        {
+          "step": 11,
+          "action": "MOVE",
+          "actor": "player",
+          "parameters": {
+            "from": "village",
+            "to": "powerstation"
+          }
+        },
+        {
+          "step": 12,
+          "action": "TALK",
+          "actor": "player",
+          "parameters": {
+            "target": "george",
+            "place": "powerstation",
+            "dialogue_content": [
+              {
+                "speaker": "PLAYER",
+                "line": "George, I need to restore power to the laboratory."
+              },
+              {
+                "speaker": "george",
+                "line": "The grid's been down for weeks. You have a fuse?"
+              },
+              {
+                "speaker": "PLAYER",
+                "line": "Yes. Will this work?"
+              },
+              {
+                "speaker": "george",
+                "line": "Should. Install it at the station and I'll route power to the lab. Keep the system stable."
+              }
+            ]
+          }
+        },
+        {
+          "step": 13,
+          "action": "TURN_POWER_ON",
+          "actor": "player",
+          "parameters": {
+            "fuse_item": "fuse_1",
+            "place": "powerstation",
+            "target_place": "laboratory"
+          }
+        }
+      ]
+    }
+  ]
+}
