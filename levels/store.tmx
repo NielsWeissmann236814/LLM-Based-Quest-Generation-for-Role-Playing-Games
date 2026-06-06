@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.12.1" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="5" nextobjectid="1">
+ <tileset firstgid="1" name="tileset1" tilewidth="32" tileheight="32" tilecount="570" columns="15">
+  <image source="tileset1.png" width="480" height="1216"/>
+  <tile id="1">
+   <properties>
+    <property name="obstacle" value="1"/>
+   </properties>
+  </tile>
+  <tile id="7">
+   <properties>
+    <property name="destination" value="world1.tmx"/>
+    <property name="locked" value="0"/>
+    <property name="target_x" value="82"/>
+    <property name="target_y" value="26"/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer id="1" name="Terreno" width="20" height="20">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACmNgGAWDGUgAsTARWJJI8zSBWIcIrEmCefxE4FHz6GOeOhBLAbEIkl5lqBgy1iDSPBkGSHrQRjIPJoaMtYk0bxQMLwAALtvs8UAGAAA=
+  </data>
+ </layer>
+ <layer id="2" name="Objetos" width="20" height="20">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACmNgGAUjEWwF4m1AHM+IHZMKjgDxUSDeA8R7oWI7GMg3DxnA9B9nIM+syxDcAHMLiH8ViK+RaR61wgzZPHx27Cbf6FEwCmgKAKGJtsdABgAA
+  </data>
+ </layer>
+ <layer id="3" name="Itens" width="20" height="20">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACmNgGAWjgLYgnnGgXTAKRsEooAUAAEOhLCVABgAA
+  </data>
+ </layer>
+ <layer id="4" name="Colisao" width="20" height="20" opacity="0">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACmNkYGBgHMWDFjORgAfKPGzmMqKZQap5hOTI8S8hMUrdRyt15MYvoTgn1TwOKKbEvFE8vDAAzuw7HEAGAAA=
+  </data>
+ </layer>
+</map>

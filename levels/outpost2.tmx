@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.12.1" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="7" nextobjectid="1">
+ <tileset firstgid="1" name="tileset1" tilewidth="32" tileheight="32" tilecount="570" columns="15">
+  <image source="tileset1.png" width="480" height="1216"/>
+  <tile id="1">
+   <properties>
+    <property name="obstacle" value="1"/>
+   </properties>
+  </tile>
+  <tile id="7">
+   <properties>
+    <property name="destination" value="outpost1.tmx"/>
+    <property name="locked" value="0"/>
+    <property name="target_x" value="15"/>
+    <property name="target_y" value="6"/>
+    <property name="target_direction" value="down"/>
+   </properties>
+  </tile>
+  <tile id="8">
+   <properties>
+    <property name="destination" value="outpost3.tmx"/>
+    <property name="locked" value="0"/>
+    <property name="target_x" value="5"/>
+    <property name="target_y" value="6"/>
+    <property name="target_direction" value="down"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="571" name="tileset4" tilewidth="32" tileheight="32" tilecount="128" columns="8">
+  <image source="tileset4.png" width="256" height="512"/>
+ </tileset>
+ <tileset firstgid="699" name="tileset5" tilewidth="32" tileheight="32" tilecount="256" columns="16">
+  <image source="tileset5.png" width="512" height="512"/>
+ </tileset>
+ <layer id="1" name="Terreno" width="20" height="20">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACmNgGJlAAoiFycSSWMzTBGIlMrEmDvN8mMjDo+aNmjfYzFNnID+/aWAxT4GB/PymiMW8UUAeAABpyFhkQAYAAA==
+  </data>
+ </layer>
+ <layer id="3" name="Objetos1" width="20" height="20">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACmNgGAUSzNQ1TwNq3nsmBoYPTBB2D1DMFIjNkOwi1l4LqLr/ILOYEeahA0ayXIvbPEoAtc2bQ2XzBgtwh/rLjRmVDws/ViR/sxIRBuFQNWHMqHyYeaJIZohSEKbUjt9RMDQBALJC+L9ABgAA
+  </data>
+ </layer>
+ <layer id="6" name="Objetos2" width="20" height="20">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACmNgGAVDBfAy45dnYyLNPFkC5hEC1RTqRwfdJJoHCg9lKroBFB7GVPbTKBgFwxkAAATWBmFABgAA
+  </data>
+ </layer>
+ <layer id="5" name="Colisao" width="20" height="20" opacity="0">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACmNkYGBgHIGYiUJMD/NgbE40O9DlYZgDjxwhMWzyhPSSqofa5hEbfuSkCWqYR0zYE0vjEqO1edSO38Ga30YxeRgA+Yr0T0AGAAA=
+  </data>
+ </layer>
+</map>

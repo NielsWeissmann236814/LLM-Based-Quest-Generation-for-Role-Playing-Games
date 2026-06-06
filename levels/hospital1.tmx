@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.12.1" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="6" nextobjectid="1">
+ <tileset firstgid="1" name="tileset1" tilewidth="32" tileheight="32" tilecount="570" columns="15">
+  <image source="tileset1.png" width="480" height="1216"/>
+  <tile id="1">
+   <properties>
+    <property name="obstacle" value="1"/>
+   </properties>
+  </tile>
+  <tile id="7">
+   <properties>
+    <property name="destination" value="world1.tmx"/>
+    <property name="target_x" value="60"/>
+    <property name="target_y" value="32"/>
+    <property name="locked" value="0"/>
+   </properties>
+  </tile>
+  <tile id="525">
+   <properties>
+    <property name="destination" value="hospital2.tmx"/>
+    <property name="target_x" value="4"/>
+    <property name="target_y" value="12"/>
+    <property name="locked" value="0"/>
+    <property name="target_direction" value="right"/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer id="1" name="Terreno" width="20" height="20">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACmNgGJlAAoiF0bAokWKSWMzTBGIlNEyKGDbz2NEwKWIj3TwxIBZCUiMIxKpEiqngcJ8ikjoFBkjcESNGrH+JxUPRPHUGzHwEwuhhj02NBhbzFBgw8xGu+MCmZhRQBwAA6/veu0AGAAA=
+  </data>
+ </layer>
+ <layer id="3" name="Objetos" width="20" height="20">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACmNgGAXUBL5A7IcmlgXE2WSaFwPEsWhilUBchSZ2CohPk2kHNnATiG9R0bxRQHtQPtAOGAUjDgAAm9SYg0AGAAA=
+  </data>
+ </layer>
+ <layer id="5" name="Colisao" width="20" height="20" opacity="0">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACmNkYGBgHIGYiUJMD/MY0eRJFcNm3kgSY8LCJ1aMHuZRknaxifExUdc8aruPUNqnVn7jgGJSzBvF5GEAMxeKK0AGAAA=
+  </data>
+ </layer>
+</map>

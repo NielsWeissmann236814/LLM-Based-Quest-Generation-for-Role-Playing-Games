@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.12.1" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="6" nextobjectid="1">
+ <tileset firstgid="1" name="tileset1" tilewidth="32" tileheight="32" tilecount="570" columns="15">
+  <image source="tileset1.png" width="480" height="1216"/>
+  <tile id="1">
+   <properties>
+    <property name="obstacle" value="1"/>
+   </properties>
+  </tile>
+  <tile id="7">
+   <properties>
+    <property name="destination" value="world1.tmx"/>
+    <property name="locked" value="0"/>
+    <property name="target_x" value="14"/>
+    <property name="target_y" value="40"/>
+   </properties>
+  </tile>
+  <tile id="8">
+   <properties>
+    <property name="destination" value="outpost2.tmx"/>
+    <property name="locked" value="0"/>
+    <property name="target_x" value="15"/>
+    <property name="target_y" value="6"/>
+    <property name="target_direction" value="down"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="571" name="tileset4" tilewidth="32" tileheight="32" tilecount="128" columns="8">
+  <image source="tileset4.png" width="256" height="512"/>
+ </tileset>
+ <tileset firstgid="699" name="tileset5" tilewidth="32" tileheight="32" tilecount="256" columns="16">
+  <image source="tileset5.png" width="512" height="512"/>
+ </tileset>
+ <layer id="1" name="Terreno" width="20" height="20">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACmNgGJlAAoiFycSSWMzTBGIlMrEmDvN8mMjDo+aNmjfYzFNnwJ6XhJDsEcShRgOLeQoM2POSIpJ5+NSMAuoAAFoQFZpABgAA
+  </data>
+ </layer>
+ <layer id="3" name="Objetos" width="20" height="20">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACmNgGAXEAglmwmrOMCEwLtADNUeDCPPuMCEwDMxmRmBk8yyIMA8XmI2kt4dEcySB6qXw6CHVvN1Av+4hIvyoBaht3hwSzOsFqu2jov1zgWbNI2DeYA+/UTB0AADwPhBcQAYAAA==
+  </data>
+ </layer>
+ <layer id="5" name="Colisao" width="20" height="20" opacity="0">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACmNkYGBgHIGYiUJMD/PQzcVmF7JaTjQ+NvPwhQcutYTMw+WHwWIeMWlhoMwj5FdizCfVvIHyL6G0T638xgHFpJg3isnDAOQaP+dABgAA
+  </data>
+ </layer>
+</map>
