@@ -49,8 +49,8 @@ Setting `LLM_QUESTS = false` launches the game without generating a quest. Setti
 │   chapters.json        → Chapter definitions with situation descriptions and scale
 │   characters.json      → NPC definitions used during generation
 │
-/Generation_Scripts      → Standalone generation scripts and sample outputs per model
-/Eval_Scripts            → Evaluation script, analysis notebook, and full results per model
+/Generation_Scripts      → Standalone generation scripts, system_prompt.txt, and sample outputs per model — see README inside
+/Eval_Scripts            → Evaluation script, analysis notebook, and full results per model — see README inside
 /levels                  → Tiled map files (.tmx) for all game locations
 /images                  → Game sprites and UI assets
 /audio                   → Game audio files
@@ -121,6 +121,8 @@ Sample outputs from manual generation runs are stored per model:
 | `Results_LLama` | Llama-3.3-70B-Instruct |
 | `Results_Qwen` | Qwen3.5-122B-A10B |
 
+See `Generation_Scripts/README.md` for setup instructions, configuration, and how to chain chapters. The system prompt used in this work is available at `Generation_Scripts/system_prompt.txt`.
+
 ---
 
 ## Evaluation Scripts
@@ -139,6 +141,8 @@ Full results are stored per model in subfolders:
 | `eval_results_buas_Three_Models` | GPT-OSS-120B, Llama-3.3-70B, Qwen3.5-122B (10 runs each) |
 
 Each folder contains per-run quest outputs (JSON), checkpoints (JSON), and summary/detail CSVs.
+
+See `Eval_Scripts/README.md` for a full description of all metrics, configuration, and hardware used during the evaluation.
 
 ---
 
