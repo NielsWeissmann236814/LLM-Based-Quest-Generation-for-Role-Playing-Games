@@ -2,7 +2,7 @@
 
 Repository for the graduation project **"LLM-Based Quest Generation for Role-Playing Games"** by Niels Weissmann (Student Number: 236814), Breda University of Applied Sciences, 2026.
 
-This repository contains the full LÖVE2D game prototype, the Python generation API, generation scripts, evaluation scripts, and all generated results used in the accompanying research paper.
+This repository contains the full LÖVE2D game prototype, the Python generation API, generation scripts, evaluation scripts, and all generated results used in the accompanying research paper. The paper is available [here](https://github.com/NielsWeissmann236814/LLM-Based-Quest-Generation-for-Role-Playing-Games/blob/main/LLMQuestGenerationPaper.pdf).
 
 ---
 
