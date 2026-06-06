@@ -26,7 +26,7 @@ TARGET_CHAPTER = "C1"
 WORLD_STATE_FILE = "world_state_initial.json"
 
 # Paths
-ROOT_DIR        = r"C:\Users\niels\OneDrive\Documents\2025-26-graduation-NielsWeissmann236814\Inputs"
+ROOT_DIR = r"C:\...\LLM-Quest-RPG\Generation_Scripts\inputs" # Update this to your local path
 CHAPTERS_DIR    = os.path.join(ROOT_DIR, "Chapters")
 CHARACTERS_DIR  = os.path.join(ROOT_DIR, "Characters")
 WORLD_STATE_DIR = os.path.join(ROOT_DIR, "World_State")
@@ -224,7 +224,7 @@ def build_chapter_prompt(chapter: dict, world_state: dict, characters: list[dict
 ID:       {chapter['id']}
 Type:     {chapter['quest_type']}
 Required: {chapter['required']}
-Scale:    {chapter.get('scale', 'medium')} (small = 5–15 steps, medium = 10–30 steps, large = 20–50 steps)
+Scale:    {chapter.get('scale', 'medium')}
 
 == CHARACTERS ==
 {json.dumps(characters, indent=2)}
@@ -237,12 +237,12 @@ Scale:    {chapter.get('scale', 'medium')} (small = 5–15 steps, medium = 10–
 - Be creative — the player does not have to follow an obvious path.
 - Use character personalities to shape dialogue and interactions.
 - All quest steps are performed by the player. NPCs appear only in dialogue and world state.
+- IMPORTANT: Only use the NPC names listed in the world state. Never invent new character names.
 - IMPORTANT: Every quest must start with the player MOVEing to a location where an NPC is present, followed immediately by a TALK with that NPC. No quest may begin with any other action.
 - IMPORTANT: Never plan two consecutive TALK actions with the same NPC at the same location — merge them into one TALK.
 - IMPORTANT: Check EVERY location's conditions before planning any MOVE or UNLOCK. If a location has "locked" in its conditions, use UNLOCK first. If it does NOT have "locked", do not plan UNLOCK — it is already open.
 - IMPORTANT: If an NPC gives something to the player, model this as PICKUP by the player — not GIVE_ITEM. GIVE_ITEM is only for the player giving items to NPCs.
-- IMPORTANT: NPC characters with the "infected" condition cannot be talked to in a way that requires them to perform actions. They can only speak in dialogue.
-- IMPORTANT: Characters with role "antagonist_npc" or "hostile_npc" will not help the player. Do not write quests where the player goes to them for assistance or cooperation.
+- IMPORTANT: NPC characters with the "infected" condition can only speak in dialogue. They cannot perform actions.
 - For every TALK action, write the actual dialogue as a dialogue_content array of speaker/line turn objects.
 - Follow all world rules.
 - Number steps globally across all quests.

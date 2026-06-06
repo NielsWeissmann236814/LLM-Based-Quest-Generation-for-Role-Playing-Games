@@ -157,7 +157,6 @@ def build_system_prompt(
 
     return f"""You are a creative quest designer for a post-apocalyptic RPG game set on a zombie-infested island.
 
-
 == TERMINOLOGY ==
 - "player" — the single human-controlled character. The player is the only one who performs quest actions.
 - "character" — any named person in the world (player or NPC). Used when referring to people in general.
@@ -228,22 +227,7 @@ Return ONLY a valid JSON object with this exact structure, no explanation:
 """
 
 
-def _build_npc_location_block(world_state: dict) -> str:
-    lines = ["NPC LOCATIONS (use ONLY these characters — do not invent new ones):"]
-    npcs = world_state.get("npcs", [])
-    if not npcs:
-        lines.append("  (no NPCs found in world state)")
-    for npc in npcs:
-        name       = npc.get("name", "unknown")
-        loc        = npc.get("location", "unknown")
-        conditions = npc.get("conditions", [])
-        cond_str   = f" [{', '.join(conditions)}]" if conditions else ""
-        lines.append(f"  {name} → {loc}{cond_str}")
-    return "\n".join(lines)
-
-
 def build_chapter_prompt(chapter: dict, world_state: dict, characters: list[dict]) -> str:
-    npc_block = _build_npc_location_block(world_state)
     return f"""Generate a quest chapter based on the situation and world state below.
 
 == SITUATION ==
@@ -253,12 +237,10 @@ def build_chapter_prompt(chapter: dict, world_state: dict, characters: list[dict
 ID:       {chapter.get('id', 'UNKNOWN')}
 Type:     {chapter.get('quest_type', 'UNKNOWN')}
 Required: {chapter.get('required', False)}
-Scale:    {chapter.get('scale', 'medium')} (small = 5–15 steps, medium = 10–30 steps, large = 20–50 steps)
+Scale:    {chapter.get('scale', 'medium')}
 
 == CHARACTERS ==
 {json.dumps(characters, indent=2)}
-
-== {npc_block} ==
 
 == CURRENT WORLD STATE ==
 {json.dumps(world_state, indent=2)}
@@ -268,7 +250,7 @@ Scale:    {chapter.get('scale', 'medium')} (small = 5–15 steps, medium = 10–
 - Be creative — the player does not have to follow an obvious path.
 - Use character personalities to shape dialogue and interactions.
 - All quest steps are performed by the player. NPCs appear only in dialogue and world state.
-- IMPORTANT: Only use the NPC names listed in NPC LOCATIONS above. Never invent new character names.
+- IMPORTANT: Only use the NPC names listed in the world state. Never invent new character names.
 - IMPORTANT: Every quest must start with the player MOVEing to a location where an NPC is present, followed immediately by a TALK with that NPC. No quest may begin with any other action.
 - IMPORTANT: Never plan two consecutive TALK actions with the same NPC at the same location — merge them into one TALK.
 - IMPORTANT: Check EVERY location's conditions before planning any MOVE or UNLOCK. If a location has "locked" in its conditions, use UNLOCK first. If it does NOT have "locked", do not plan UNLOCK — it is already open.

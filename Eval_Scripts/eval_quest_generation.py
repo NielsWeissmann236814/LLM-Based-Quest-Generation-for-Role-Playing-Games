@@ -51,7 +51,7 @@ MAX_RETRIES      = 3
 MAX_TOKENS       = 8192
 TEMPERATURE      = 0.7
 
-ROOT_DIR        = r"C:\Users\niels\OneDrive\Documents\2025-26-graduation-NielsWeissmann236814\Inputs"
+ROOT_DIR = r"C:\...\LLM-Quest-RPG\Eval_Scripts\inputs" # Update this to your local path
 CHAPTERS_DIR    = os.path.join(ROOT_DIR, "Chapters")
 CHARACTERS_DIR  = os.path.join(ROOT_DIR, "Characters")
 WORLD_STATE_DIR = os.path.join(ROOT_DIR, "World_State")

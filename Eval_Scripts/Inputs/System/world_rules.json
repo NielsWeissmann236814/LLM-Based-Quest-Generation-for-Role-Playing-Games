@@ -1,0 +1,136 @@
+{
+  "world_rules": [
+    {
+      "id": "WSR_01",
+      "actors": ["player", "npc"],
+      "rule": "MOVE before acting",
+      "description": "The actor must MOVE to a location before performing any action there. An actor cannot act at a location they are not currently at."
+    },
+    {
+      "id": "WSR_02",
+      "actors": ["player", "npc"],
+      "rule": "Unlock before entering locked place",
+      "description": "A locked place must be UNLOCK-ed with the correct key item before the actor can enter or perform actions inside it. UNLOCK both removes the locked condition and moves the actor into the place in a single action — a separate MOVE is not required after UNLOCK."
+    },
+    {
+      "id": "WSR_03",
+      "actors": ["player", "npc"],
+      "rule": "Item must be in inventory before use",
+      "description": "Items must be in the actor's inventory before they can be used."
+    },
+    {
+      "id": "WSR_04",
+      "actors": ["player", "npc"],
+      "rule": "PICKUP requires a location with the item",
+      "description": "An actor can only PICKUP an item if both the actor and the item are at the same location."
+    },
+    {
+      "id": "WSR_05",
+      "actors": ["player"],
+      "rule": "Interaction requires a location with the target character",
+      "description": "Characters must be at the same location as the actor to interact with them via USE_CURE, GIVE_ITEM, or TALK."
+    },
+    {
+      "id": "WSR_06",
+      "actors": ["player", "npc"],
+      "rule": "Paths are required for movement and are directional",
+      "description": "An actor can only MOVE between two locations if an explicit directional connection from the origin to the destination exists in the world state connections. Connections are bi-directional — the existence of a connection from A to B implies that movement from B to A is possible. Always check the connections list for the specific direction of travel required. Actors can only MOVE from/to locations that are unlocked (it's not possible to move from or to locations with the 'locked' condition)."
+    },
+    {
+      "id": "WSR_07",
+      "actors": ["player", "npc"],
+      "rule": "TALK requires location with target character",
+      "description": "The actor and target character must both be at the same location before a TALK action can occur."
+    },
+    {
+      "id": "WSR_08",
+      "actors": ["player", "npc"],
+      "rule": "DROP moves item from inventory to location",
+      "description": "The actor must have the item in their inventory before using DROP. After DROP, the item is removed from the actor's inventory and placed at the actor's current location."
+    },
+    {
+      "id": "WSR_09",
+      "actors": ["player", "npc"],
+      "rule": "SYNTHESIZE_CURE requires power, cure_sample, and no existing antidote_1",
+      "description": "The laboratory must have the 'power_on' condition before SYNTHESIZE_CURE can be performed there. Power is restored by performing TURN_POWER_ON with a fuse at the powerstation. The actor must also have a cure_sample in their inventory. The actor must not already have a antidote_1 — since antidote_1 is only created by SYNTHESIZE_CURE, this action can only be performed once per antidote cycle."
+    },
+    {
+      "id": "WSR_10",
+      "actors": ["player"],
+      "rule": "REPAIR requires correct items, a location with the target, and a correct place",
+      "description": "The actor must be at the same location as the object being repaired and must have all required items in their inventory. Repairing the boat requires both toolkit and wood and the actor must be at the dock. All required items are consumed on use."
+    },
+    {
+      "id": "WSR_11",
+      "actors": ["player", "npc"],
+      "rule": "FORTIFY requires wood",
+      "description": "The actor must have at least one wood item in their inventory before performing a FORTIFY action. The wood is consumed on use and the 'fortified' condition is added to the target location. Only interior locations can be fortified. Fortifying a place once is enough to make it safe. Locations can not be fortified more than once"
+    },
+    {
+      "id": "WSR_12",
+      "actors": ["player"],
+      "rule": "TALK before key interactions with NPCs",
+      "description": "The actor must TALK to an NPC before performing any of the following actions that directly involve that NPC: GIVE_ITEM, USE_CURE targeting that NPC, SUPPLY targeting that NPC, or any action that directly changes that NPC's condition or inventory."
+    },
+    {
+      "id": "WSR_13",
+      "actors": ["player"],
+      "rule": "Consumed items are removed from inventory after use",
+      "description": "Actions that consume items remove them from the actor's inventory upon execution. The following actions consume items: REPAIR (toolkit and wood), FORTIFY (wood), SYNTHESIZE_CURE (cure_sample), TURN_POWER_ON (fuse), UNLOCK (key), USE_CURE (antidote_1), SUPPLY (food_supplies). The LLM must not plan actions that reuse already-consumed items."
+    },
+    {
+      "id": "WSR_14",
+      "actors": ["player", "npc"],
+      "rule": "Locked places block movement",
+      "description": "An actor cannot MOVE to a location that has the 'locked' condition. The location must be UNLOCK-ed first using the correct key item. The key required for each locked location is specified in the location's 'access' field in the world state. Note: items located inside a locked place are inaccessible until the place is unlocked."
+    },
+    {
+      "id": "WSR_16",
+      "actors": ["player", "npc"],
+      "rule": "Only one antidote_1 can be synthesized at a time",
+      "description": "SYNTHESIZE_CURE cannot be performed if the actor already has antidote_1 in their inventory. The existing antidote_1 must be used or given to another character before a new one can be synthesized."
+    },
+    {
+      "id": "WSR_17",
+      "actors": ["npc"],
+      "rule": "Infected NPCs have limited actions",
+      "description": "An NPC with the 'infected' condition may only perform TALK and WALK_AROUND. They cannot MOVE to new locations, PICKUP items, USE items, GIVE_ITEM, SYNTHESIZE_CURE, FORTIFY, REPAIR, or perform any other action until the 'infected' condition is removed by USE_CURE. Quest steps must not assign any restricted action to an infected NPC."
+    },
+    {
+      "id": "WSR_18",
+      "actors": ["player"],
+      "rule": "Consumed items must be in the actor's own inventory",
+      "description": "Any item that is consumed by an action must be in the actor's own inventory at the time of execution. An actor cannot use an item held by another character."
+    },
+    {
+      "id": "WSR_19",
+      "actors": ["player"],
+      "rule": "Win condition: complete the final chapter",
+      "description": "The game ends when the player completes the final chapter. The final chapter is determined by the total number of chapters in the game. The LLM decides how the final chapter concludes based on the situation and world state — there is no single required final action."
+    },
+    {
+      "id": "WSR_21",
+      "actors": ["npc"],
+      "rule": "Items with null location do not exist",
+      "description": "If an item's location is null, it does not exist in the world and cannot be picked up, used, or interacted with in any way. It only becomes available once it has been assigned to a valid location."
+    },
+    {
+      "id": "WSR_22",
+      "actors": ["npc"],
+      "rule": "Pick up item before using it",
+      "description": "An actor cannot use an item unless it is already in their inventory. They must first perform a PICKUP action on the item while standing in the same location as the item."
+    },
+    {
+      "id": "WSR_23",
+      "actors": ["npc"],
+      "rule": "Dangerous locations cannot be entered",
+      "description": "A location with the dangerous condition cannot be entered by any actor."
+    },
+    {
+      "id": "WSR_24",
+      "actors": ["npc"],
+      "rule": "TALK requires dialogue_content parameter",
+      "description": "Every TALK action MUST include a 'dialogue_content' field in its parameters."
+    }
+  ]
+}
