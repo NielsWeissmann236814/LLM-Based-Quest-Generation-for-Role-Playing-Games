@@ -84,6 +84,8 @@ The notebook expects the results to be present in the `eval_results_buas_*` subf
 
 The notebook uses hardcoded paths pointing to the specific timestamped result files from the original evaluation. If running a fresh evaluation, update the DETAIL_CSV_*, SUMMARY_CSV_*, and QUESTS_DIR_* variables at the top of the second cell to match your new output filenames.
 
+The exact filenames can be found in the relevant eval_results_buas_* subfolder after running the script, look for eval_detail_{timestamp}.csv and eval_summary_{timestamp}.csv and copy the full filename including the timestamp into the variables.
+
 ---
 
 ## Metrics
@@ -122,7 +124,7 @@ Full results from the evaluation described in the paper are stored in the follow
 
 Each folder contains per-run checkpoint JSONs, per-run quest JSONs, and a detail and summary CSV.
 
-The results were collected in 4 separate runs. The first run used Qwen3.6-27B as a single-model test to verify the pipeline but on a different and slower server. The second run evaluated GPT-OSS-120B, Llama-3.3-70B, and Qwen3.5-122B together. Qwen3.6-27B was then rerun on the correct and same server to ensure its performance metrics were comparable to the other models. Claude Opus 4.7 was evaluated in the last run due to API costs.
+The results were collected in 4 separate runs. The first run used Qwen3.6-27B as a single-model test to verify the pipeline but on a different and slower server. The second run evaluated GPT-OSS-120B, Llama-3.3-70B, and Qwen3.5-122B together. Qwen3.6-27B was then rerun on the correct and same server to ensure its performance metrics were comparable to the other models. Claude Opus 4.7 was evaluated in the last run due to API costs. Folders were manually created and named for clear structure. 
 
 ---
 
