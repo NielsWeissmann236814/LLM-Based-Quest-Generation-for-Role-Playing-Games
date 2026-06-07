@@ -42,7 +42,7 @@ ROOT_DIR       = r"C:\...\LLM-Quest-RPG\Eval_Scripts\inputs"  # Update to your l
 OUTPUT_DIR     = "eval_results_buas"
 ```
 
-Claude Opus 4.7 cannot be included in the same `MODEL_CONFIGS` list as the local models. Run it separately using `eval_quest_generation_Claude.py`, which has the same configuration structure but with the incompatible parameters removed.
+Claude Opus 4.7 cannot be included in the same `MODEL_CONFIGS` list as the local models. Run it separately using `eval_quest_generation_Claude.py`, which has the same configuration structure but with the incompatible parameters removed. The name is "claude-opus-4-7".
 
 ---
 

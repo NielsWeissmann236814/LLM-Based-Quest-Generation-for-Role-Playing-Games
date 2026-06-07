@@ -51,7 +51,11 @@ ROOT_DIR         = r"C:\...\LLM-Quest-RPG\Generation_Scripts\inputs"  # Update t
 ```bash
 cd Generation_Scripts
 python quest_generation_local.py
-or
+```
+
+For Claude:
+
+```bash
 python quest_generation_local_claude.py
 ```
 
