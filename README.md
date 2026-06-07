@@ -154,6 +154,8 @@ See `Eval_Scripts/README.md` for a full description of all metrics, configuratio
 - `fastapi`, `uvicorn`, `openai`, `python-dotenv` (API dependencies)
 - A valid `BUAS_LLM_KEY` in `/api/.env`
 
+The scripts are configured to use a BUAS-hosted inference server. To reproduce with your own models, update base_url and api_key in MODEL_CONFIGS to point to any OpenAI-compatible API endpoint.
+
 ---
 
 ## Credits
