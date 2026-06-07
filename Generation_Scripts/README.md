@@ -20,7 +20,7 @@ This folder contains the standalone quest generation script used for single-run 
 1. Loading the chapter definition, characters, world state, action library, and world rules from the `inputs` folder
 2. Building the system and user prompts
 3. Calling the LLM API and parsing the JSON response
-4. Validating that all TALK actions contain structured dialogue — retrying up to 3 times if not
+4. Validating that all TALK actions contain structured dialogue, retrying up to 3 times if not
 5. Saving the generated quest plan as `quest_output_{CHAPTER_ID}.json`
 6. Updating the world state based on the generated steps and saving it as `world_state_after_{CHAPTER_ID}.json`
 
