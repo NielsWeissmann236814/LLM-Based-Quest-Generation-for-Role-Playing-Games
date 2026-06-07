@@ -82,6 +82,8 @@ At the end of all runs, two CSV files are produced:
 
 The notebook expects the results to be present in the `eval_results_buas_*` subfolders. If running a fresh evaluation, run the script first before opening the notebook.
 
+The notebook uses hardcoded paths pointing to the specific timestamped result files from the original evaluation. If running a fresh evaluation, update the DETAIL_CSV_*, SUMMARY_CSV_*, and QUESTS_DIR_* variables at the top of the second cell to match your new output filenames.
+
 ---
 
 ## Metrics
@@ -124,6 +126,7 @@ The results were collected in 4 separate runs. The first run used Qwen3.6-27B as
 
 ---
 
+The three result folders correspond to the four separate evaluation runs. eval_results_buas_Three_Models contains the first three-model run (GPT-OSS-120B, Llama-3.3-70B, Qwen3.5-122B). eval_results_buas_Speed_Test contains the Qwen3.6-27B rerun on the correct server. eval_results_buas_Claude contains the Claude Opus 4.7 run.
 ## Hardware
 
 The evaluation was run on:
