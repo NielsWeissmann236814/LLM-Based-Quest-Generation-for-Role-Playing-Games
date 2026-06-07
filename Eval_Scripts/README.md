@@ -6,7 +6,8 @@ This folder contains the evaluation script and analysis notebook used to measure
 
 ## Scripts and Files
 
-- `eval_quest_generation.py` — main evaluation script; runs generation and scoring across all configured models and chapters
+- `eval_quest_generation.py` — main evaluation script for all local models; runs generation and scoring across all configured models and chapters
+- `eval_quest_generation_Claude.py` — Claude-specific version of the evaluation script. Claude Opus 4.7 does not accept the `temperature` parameter or the `extra_body` thinking flags used by the local models. This version has those removed to avoid API errors. Run Claude separately using this script.
 - `Evaluation_Notebook_First_Version.ipynb` — notebook for analysing and visualising the results; produces the tables and figures used in the paper
 - `system_prompt.txt` — see `Generation_Scripts/system_prompt.txt`; the same prompt was used for both scripts
 
@@ -34,13 +35,14 @@ MODEL_CONFIGS = [
     {"name": "Qwen3.6-27B",     "base_url": "https://edirlei.com/buas-llm-server/v1", "api_key": BUAS_LLM_KEY},
     {"name": "GPT-OSS-120B",    "base_url": "https://edirlei.com/buas-llm-server/v1", "api_key": BUAS_LLM_KEY},
     {"name": "Llama3.3-70B",    "base_url": "https://edirlei.com/buas-llm-server/v1", "api_key": BUAS_LLM_KEY},
-    {"name": "claude-opus-4-7", "base_url": "https://edirlei.com/buas-llm-server/v1", "api_key": BUAS_LLM_KEY},
 ]
 
 RUNS_PER_MODEL = 10
 ROOT_DIR       = r"C:\...\LLM-Quest-RPG\Eval_Scripts\inputs"  # Update to your local path
 OUTPUT_DIR     = "eval_results_buas"
 ```
+
+Claude Opus 4.7 cannot be included in the same `MODEL_CONFIGS` list as the local models. Run it separately using `eval_quest_generation_Claude.py`, which has the same configuration structure but with the incompatible parameters removed.
 
 ---
 
@@ -49,6 +51,12 @@ OUTPUT_DIR     = "eval_results_buas"
 ```bash
 cd Eval_Scripts
 python eval_quest_generation.py
+```
+
+For Claude:
+
+```bash
+python eval_quest_generation_Claude.py
 ```
 
 Results are saved to the `OUTPUT_DIR` folder. Each run produces two files:
@@ -60,6 +68,19 @@ At the end of all runs, two CSV files are produced:
 
 - `eval_detail_{timestamp}.csv` — one row per model/run/chapter with all raw metric values
 - `eval_summary_{timestamp}.csv` — mean and standard deviation per model/chapter across all runs
+
+---
+
+## Analysis Notebook
+
+`Evaluation_Notebook_First_Version.ipynb` is used to analyse and visualise the results after running the evaluation script. Open it in Jupyter and run the cells to:
+
+- Load the detail and summary CSVs produced by the evaluation script
+- Generate the metric tables used in the paper
+- Produce the NPC usage and dialogue length distribution figures
+- Review per-model findings across all six metric categories
+
+The notebook expects the results to be present in the `eval_results_buas_*` subfolders. If running a fresh evaluation, run the script first before opening the notebook.
 
 ---
 

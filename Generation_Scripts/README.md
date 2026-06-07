@@ -6,15 +6,16 @@ This folder contains the standalone quest generation script used for single-run 
 
 ## Scripts
 
-- `Quest_QwenV9.py` — main generation script; configure and run this
-- `world_state_updater.py` — applies the generated quest steps to the world state; called automatically at the end of each run. Must be present in the same folder as `Quest_QwenV9.py`
+- `quest_generation_local.py` — main generation script for all local models; configure and run this
+- `quest_generation_local_claude.py` — Claude-specific version of the generation script. Claude Opus 4.7 is served through the same endpoint as the local models but does not accept the `temperature` parameter or the `extra_body` thinking flags used by the Qwen and other local models. This version has those removed to avoid API errors when running Claude.
+- `world_state_updater.py` — applies the generated quest steps to the world state; called automatically at the end of each run. Must be present in the same folder as the generation script
 - `system_prompt.txt` — the system and user prompts used for quest generation, provided as a standalone reference file
 
 ---
 
 ## What It Does
 
-`Quest_QwenV9.py` generates a single quest chapter for a given chapter ID by:
+`quest_generation_local.py` generates a single quest chapter for a given chapter ID by:
 
 1. Loading the chapter definition, characters, world state, action library, and world rules from the `inputs` folder
 2. Building the system and user prompts
@@ -29,10 +30,15 @@ To chain chapters, set `WORLD_STATE_FILE` to the previously saved world state ou
 
 ## Configuration
 
-At the top of `Quest_QwenV9.py`, set the following before running:
+At the top of `quest_generation_local.py`, set the following before running:
 
 ```python
-OLLAMA_MODEL     = "Qwen3.6-27B"          # Model to use — see Model_List.ipynb for available models
+OLLAMA_MODEL     = "Qwen3.6-27B"          # Available models:
+                                           # "Qwen3.5-122B"
+                                           # "Qwen3.6-27B"
+                                           # "GPT-OSS-120B"
+                                           # "Llama3.3-70B"
+                                           # "claude-opus-4-7"
 TARGET_CHAPTER   = "C1"                   # Chapter to generate: "C1", "C2", or "C3"
 WORLD_STATE_FILE = "world_state_initial.json"  # Starting world state; update when chaining chapters
 ROOT_DIR         = r"C:\...\LLM-Quest-RPG\Generation_Scripts\inputs"  # Update to your local path
@@ -44,7 +50,9 @@ ROOT_DIR         = r"C:\...\LLM-Quest-RPG\Generation_Scripts\inputs"  # Update t
 
 ```bash
 cd Generation_Scripts
-python Quest_QwenV9.py
+python quest_generation_local.py
+or
+python quest_generation_local_claude.py
 ```
 
 The script prints progress to the terminal and saves two output files in the `Generation_Scripts` folder:

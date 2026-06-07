@@ -110,7 +110,7 @@ Press **Enter** on the title screen to start. The game will generate the first q
 
 ## Generation Scripts
 
-The `/Generation_Scripts` folder contains the standalone script (`Quest_QwenV9.py`) used to generate quest plans outside of the game environment. This is the script used for single run tests.
+The `/Generation_Scripts` folder contains the standalone scripts (`quest_generation_local.py` and `quest_generation_local_claude.py`) used to generate quest plans outside of the game environment. These are the scripts used for single run tests.
 
 Sample outputs from manual generation runs are stored per model:
 
@@ -127,9 +127,10 @@ See `Generation_Scripts/README.md` for setup instructions, configuration, and ho
 
 ## Evaluation Scripts
 
-The `/Eval_Scripts` folder contains the scripts used to measure quest quality across the five models evaluated in the paper. This is the script used during the evaluation described in the paper.
+The `/Eval_Scripts` folder contains the scripts used to measure quest quality across the five models evaluated in the paper. These are the scripts used during the evaluation described in the paper.
 
-- `eval_quest_generation.py` — runs generation and evaluation across all models and chapters
+- `eval_quest_generation.py` — runs generation and evaluation across all local models and chapters
+- `eval_quest_generation_Claude.py` — Claude-specific version; run separately due to API parameter differences
 - `Evaluation_Notebook_First_Version.ipynb` — notebook for analysing and visualising results
 
 Full results are stored per model in subfolders:
