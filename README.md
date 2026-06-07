@@ -78,7 +78,7 @@ Then add it to your system PATH so it can be called from the terminal:
 Create a `.env` file inside the `/api` folder:
 
 ```
-BUAS_LLM_KEY=your_key_here
+BUAS_LLM_KEY=your_key_here 
 ```
 
 ### 3. Start the Generation API
