@@ -1,0 +1,1382 @@
+[
+  {
+    "model": "claude-opus-4-7",
+    "run": 2,
+    "chapter_id": "C1",
+    "quest_data": {
+      "chapter_id": "C1",
+      "chapter_title": "The Dying Light",
+      "quest_type": "main",
+      "required": true,
+      "scale": "medium",
+      "quests": [
+        {
+          "quest_id": "C1Q1",
+          "quest_title": "Word from the Storekeeper",
+          "steps": [
+            {
+              "step": 1,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "safehouse",
+                "to": "village"
+              }
+            },
+            {
+              "step": 2,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "village",
+                "to": "store"
+              }
+            },
+            {
+              "step": 3,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "target": "anne",
+                "place": "store",
+                "dialogue_content": [
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Anne. The village is unraveling. I need to know what's actually going on."
+                  },
+                  {
+                    "speaker": "anne",
+                    "line": "You and everyone else who walks through that door. Sarah's the one who'd know. She was working on something \u2014 a cure, she called it."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Where is she now?"
+                  },
+                  {
+                    "speaker": "anne",
+                    "line": "Locked herself in the laboratory. Word is she's not well anymore. The lab key was lost out by the graveyard \u2014 one of her assistants didn't make it back."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "And the lab itself?"
+                  },
+                  {
+                    "speaker": "anne",
+                    "line": "Dark. Power's been out for weeks. George at the powerstation could fix that, if you bring him a fuse. There's one inside the lab, ironic as that is."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Anything else I should know?"
+                  },
+                  {
+                    "speaker": "anne",
+                    "line": "Be careful at the graveyard. And whatever Sarah's working on \u2014 finish it. This place won't survive another month otherwise."
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "quest_id": "C1Q2",
+          "quest_title": "The Key Among the Dead",
+          "steps": [
+            {
+              "step": 4,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "store",
+                "to": "village"
+              }
+            },
+            {
+              "step": 5,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "village",
+                "to": "powerstation"
+              }
+            },
+            {
+              "step": 6,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "target": "george",
+                "place": "powerstation",
+                "dialogue_content": [
+                  {
+                    "speaker": "PLAYER",
+                    "line": "George. The lab's dark. I need power back on."
+                  },
+                  {
+                    "speaker": "george",
+                    "line": "Lab grid blew weeks back. Need a fuse. Standard type. Should be one in the lab's own supply locker."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "I'll bring it. Anything else?"
+                  },
+                  {
+                    "speaker": "george",
+                    "line": "Bring the fuse here. I'll wire it in. Grid handles the rest."
+                  }
+                ]
+              }
+            },
+            {
+              "step": 7,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "powerstation",
+                "to": "village"
+              }
+            },
+            {
+              "step": 8,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "village",
+                "to": "graveyard"
+              }
+            },
+            {
+              "step": 9,
+              "action": "PICKUP",
+              "actor": "player",
+              "parameters": {
+                "item": "lab_key_1",
+                "place": "graveyard"
+              }
+            }
+          ]
+        },
+        {
+          "quest_id": "C1Q3",
+          "quest_title": "Power and the Sample",
+          "steps": [
+            {
+              "step": 10,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "graveyard",
+                "to": "village"
+              }
+            },
+            {
+              "step": 11,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "village",
+                "to": "hospital1"
+              }
+            },
+            {
+              "step": 12,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "hospital1",
+                "to": "hospital2"
+              }
+            },
+            {
+              "step": 13,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "target": "marcus",
+                "place": "hospital2",
+                "dialogue_content": [
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Marcus. You holding this ward?"
+                  },
+                  {
+                    "speaker": "marcus",
+                    "line": "For now. Sarah left a sample here before she got worse. Vial on the counter. Don't drop it."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "I'm taking it to the lab. Synthesizing the cure."
+                  },
+                  {
+                    "speaker": "marcus",
+                    "line": "Good. I'll hold the line here. Move."
+                  }
+                ]
+              }
+            },
+            {
+              "step": 14,
+              "action": "PICKUP",
+              "actor": "player",
+              "parameters": {
+                "item": "cure_sample_1",
+                "place": "hospital2"
+              }
+            },
+            {
+              "step": 15,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "hospital2",
+                "to": "hospital1"
+              }
+            },
+            {
+              "step": 16,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "hospital1",
+                "to": "village"
+              }
+            },
+            {
+              "step": 17,
+              "action": "UNLOCK",
+              "actor": "player",
+              "parameters": {
+                "key_item": "lab_key_1",
+                "target_place": "laboratory"
+              }
+            },
+            {
+              "step": 18,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "target": "sarah",
+                "place": "laboratory",
+                "dialogue_content": [
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Sarah. You're still with me?"
+                  },
+                  {
+                    "speaker": "sarah",
+                    "line": "Mostly. The infection is... progressing slower than the model predicted. Interesting, if it weren't me."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "I have the sample. I'm going to get the power on and synthesize the antidote."
+                  },
+                  {
+                    "speaker": "sarah",
+                    "line": "Fuse is in the cabinet by the door. The synthesis sequence runs automatically once the rig has power and a viable sample is loaded."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Then hold on. I'll be back."
+                  },
+                  {
+                    "speaker": "sarah",
+                    "line": "I'm not going anywhere. Logically speaking."
+                  }
+                ]
+              }
+            },
+            {
+              "step": 19,
+              "action": "PICKUP",
+              "actor": "player",
+              "parameters": {
+                "item": "fuse_1",
+                "place": "laboratory"
+              }
+            }
+          ]
+        },
+        {
+          "quest_id": "C1Q4",
+          "quest_title": "A Cure for Sarah",
+          "steps": [
+            {
+              "step": 20,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "laboratory",
+                "to": "village"
+              }
+            },
+            {
+              "step": 21,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "village",
+                "to": "powerstation"
+              }
+            },
+            {
+              "step": 22,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "target": "george",
+                "place": "powerstation",
+                "dialogue_content": [
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Got the fuse."
+                  },
+                  {
+                    "speaker": "george",
+                    "line": "Hand it here. I'll route power to the lab line."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Do it."
+                  },
+                  {
+                    "speaker": "george",
+                    "line": "Done in a minute. Go."
+                  }
+                ]
+              }
+            },
+            {
+              "step": 23,
+              "action": "TURN_POWER_ON",
+              "actor": "player",
+              "parameters": {
+                "fuse_item": "fuse_1",
+                "place": "powerstation",
+                "target_place": "laboratory"
+              }
+            },
+            {
+              "step": 24,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "powerstation",
+                "to": "village"
+              }
+            },
+            {
+              "step": 25,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "village",
+                "to": "laboratory"
+              }
+            },
+            {
+              "step": 26,
+              "action": "SYNTHESIZE_CURE",
+              "actor": "player",
+              "parameters": {
+                "place": "laboratory"
+              }
+            },
+            {
+              "step": 27,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "target": "sarah",
+                "place": "laboratory",
+                "dialogue_content": [
+                  {
+                    "speaker": "PLAYER",
+                    "line": "It worked. Hold still."
+                  },
+                  {
+                    "speaker": "sarah",
+                    "line": "Intramuscular, upper deltoid. Don't be gentle \u2014 the compound needs to disperse."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Understood."
+                  }
+                ]
+              }
+            },
+            {
+              "step": 28,
+              "action": "USE_CURE",
+              "actor": "player",
+              "parameters": {
+                "item": "antidote_1",
+                "target": "sarah"
+              }
+            },
+            {
+              "step": 29,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "target": "sarah",
+                "place": "laboratory",
+                "dialogue_content": [
+                  {
+                    "speaker": "sarah",
+                    "line": "Vision's clearing. Heart rate's settling. It works."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Can you make more?"
+                  },
+                  {
+                    "speaker": "sarah",
+                    "line": "With the rig running and more samples \u2014 yes. The village has a chance now. A real one."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Then we're not done yet."
+                  },
+                  {
+                    "speaker": "sarah",
+                    "line": "No. But for the first time in weeks, I think we might get there."
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "model": "claude-opus-4-7",
+    "run": 2,
+    "chapter_id": "C2",
+    "quest_data": {
+      "chapter_id": "C2",
+      "chapter_title": "The Hand Behind the Curtain",
+      "quest_type": "main",
+      "required": true,
+      "scale": "large",
+      "quests": [
+        {
+          "quest_id": "C2Q1",
+          "quest_title": "Whispers in the Store",
+          "steps": [
+            {
+              "step": 1,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "laboratory",
+                "to": "village"
+              }
+            },
+            {
+              "step": 2,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "village",
+                "to": "store"
+              }
+            },
+            {
+              "step": 3,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "target": "anne",
+                "place": "store",
+                "dialogue_content": [
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Anne. I need to know what you've been hearing. Someone is steering all of this \u2014 the outbreak, the patrols, the silence from the outpost."
+                  },
+                  {
+                    "speaker": "anne",
+                    "line": "I wondered when you'd come asking. People pass through here. They leave more than coin behind \u2014 they leave words."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Then tell me. Who's pulling the strings?"
+                  },
+                  {
+                    "speaker": "anne",
+                    "line": "Viktor holds the rifle. But the rifle was loaded by someone else. There's a doctor up at the outpost \u2014 quiet type, never comes down. The samples, the sickness, all of it traces back to him."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "The Doctor. Where exactly?"
+                  },
+                  {
+                    "speaker": "anne",
+                    "line": "Deep in. Past Viktor. You won't walk in through the front \u2014 that gate's locked tight. There's a key, though. George's people stashed one in the cave outside the village when the outpost first sealed itself off."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "And George?"
+                  },
+                  {
+                    "speaker": "anne",
+                    "line": "At the powerstation, like always. If you're going up there, talk to him first. He knows more about that place than he lets on."
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "quest_id": "C2Q2",
+          "quest_title": "The Engineer's Counsel",
+          "steps": [
+            {
+              "step": 4,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "store",
+                "to": "village"
+              }
+            },
+            {
+              "step": 5,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "village",
+                "to": "powerstation"
+              }
+            },
+            {
+              "step": 6,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "target": "george",
+                "place": "powerstation",
+                "dialogue_content": [
+                  {
+                    "speaker": "PLAYER",
+                    "line": "George. Anne told me you'd know about the outpost."
+                  },
+                  {
+                    "speaker": "george",
+                    "line": "I wired half of it before Viktor took over. What do you need?"
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "The Doctor. He's behind the infection. I'm going in after him."
+                  },
+                  {
+                    "speaker": "george",
+                    "line": "Through three doors. First one's locked. Key's in the cave."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Anything else I should know?"
+                  },
+                  {
+                    "speaker": "george",
+                    "line": "Viktor sits in the middle room. The Doctor's in the back. Don't waste time talking to Viktor \u2014 he won't move aside. Go around him if you can. Through him if you can't."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Understood."
+                  },
+                  {
+                    "speaker": "george",
+                    "line": "Good luck. End this."
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "quest_id": "C2Q3",
+          "quest_title": "The Key in the Cave",
+          "steps": [
+            {
+              "step": 7,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "powerstation",
+                "to": "village"
+              }
+            },
+            {
+              "step": 8,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "village",
+                "to": "cave"
+              }
+            },
+            {
+              "step": 9,
+              "action": "PICKUP",
+              "actor": "player",
+              "parameters": {
+                "item": "outpost_key_1",
+                "place": "cave"
+              }
+            }
+          ]
+        },
+        {
+          "quest_id": "C2Q4",
+          "quest_title": "Confronting the Architect",
+          "steps": [
+            {
+              "step": 10,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "cave",
+                "to": "village"
+              }
+            },
+            {
+              "step": 11,
+              "action": "UNLOCK",
+              "actor": "player",
+              "parameters": {
+                "key_item": "outpost_key_1",
+                "target_place": "outpost1"
+              }
+            },
+            {
+              "step": 12,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "outpost1",
+                "to": "outpost2"
+              }
+            },
+            {
+              "step": 13,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "target": "viktor",
+                "place": "outpost2",
+                "dialogue_content": [
+                  {
+                    "speaker": "viktor",
+                    "line": "You walked through that door like you own it. Bold. Stupid, but bold."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "I'm not here for you, Viktor. I'm here for the man behind you."
+                  },
+                  {
+                    "speaker": "viktor",
+                    "line": "The Doctor. Of course. Everyone wants the Doctor eventually."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Step aside."
+                  },
+                  {
+                    "speaker": "viktor",
+                    "line": "I won't stop you. Not today. He's outlived his usefulness to me \u2014 and if you finish what he started, that's one less loose end I have to clean up. Go on. See what your conscience makes of him."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "How generous."
+                  },
+                  {
+                    "speaker": "viktor",
+                    "line": "Don't mistake it for kindness. When you come back through this room, we'll have a different conversation."
+                  }
+                ]
+              }
+            },
+            {
+              "step": 14,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "outpost2",
+                "to": "outpost3"
+              }
+            },
+            {
+              "step": 15,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "target": "the_doctor",
+                "place": "outpost3",
+                "dialogue_content": [
+                  {
+                    "speaker": "the_doctor",
+                    "line": "Ah. The variable arrives at last. I confess, your persistence has exceeded my projections."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "You did this. The infection. The samples. All of it."
+                  },
+                  {
+                    "speaker": "the_doctor",
+                    "line": "I observed. I refined. The pathogen existed independently of me \u2014 I simply ensured it had a worthy environment in which to express itself."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "People died. The whole island."
+                  },
+                  {
+                    "speaker": "the_doctor",
+                    "line": "People die regardless. The difference, in my case, is that the dying yielded data. You should be thanking me \u2014 the cure Sarah is so close to would not exist without my contributions."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Where are the original samples? The records?"
+                  },
+                  {
+                    "speaker": "the_doctor",
+                    "line": "On this table. I will not stop you from taking them. Curiosity, you understand \u2014 I'd like to see what someone with your limitations does with my work. And you will need a toolkit too, I imagine. It's there. A gift, if you like."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "I'll decide what your work is worth."
+                  }
+                ]
+              }
+            },
+            {
+              "step": 16,
+              "action": "PICKUP",
+              "actor": "player",
+              "parameters": {
+                "item": "toolkit_1",
+                "place": "outpost3"
+              }
+            }
+          ]
+        },
+        {
+          "quest_id": "C2Q5",
+          "quest_title": "Carrying the Truth Home",
+          "steps": [
+            {
+              "step": 17,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "outpost3",
+                "to": "outpost2"
+              }
+            },
+            {
+              "step": 18,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "outpost2",
+                "to": "outpost1"
+              }
+            },
+            {
+              "step": 19,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "outpost1",
+                "to": "village"
+              }
+            },
+            {
+              "step": 20,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "village",
+                "to": "laboratory"
+              }
+            },
+            {
+              "step": 21,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "target": "sarah",
+                "place": "laboratory",
+                "dialogue_content": [
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Sarah. I found him. The Doctor. He admitted everything \u2014 he was cultivating the pathogen up at the outpost."
+                  },
+                  {
+                    "speaker": "sarah",
+                    "line": "That confirms what I suspected. The strain variations didn't match a natural mutation pattern. Did you bring anything back?"
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "A toolkit. The samples \u2014 he claims they're the foundation of any real cure."
+                  },
+                  {
+                    "speaker": "sarah",
+                    "line": "He's not wrong. Distasteful as it is, his data shortens our path considerably. Hold on to the toolkit. We'll need it before the end."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "And Viktor? He let me walk past him."
+                  },
+                  {
+                    "speaker": "sarah",
+                    "line": "Because the Doctor was a liability to him. With the Doctor exposed, Viktor is the only hand left on the strings. That's the next problem."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "One thread at a time."
+                  },
+                  {
+                    "speaker": "sarah",
+                    "line": "Yes. One thread at a time. Rest. We're closer than we were yesterday."
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "model": "claude-opus-4-7",
+    "run": 2,
+    "chapter_id": "C3",
+    "quest_data": {
+      "chapter_id": "C3",
+      "chapter_title": "The Last Tide",
+      "quest_type": "main",
+      "required": true,
+      "scale": "large",
+      "quests": [
+        {
+          "quest_id": "C3_Q1",
+          "quest_title": "A Boat and a Bargain",
+          "steps": [
+            {
+              "step": 1,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "laboratory",
+                "to": "village"
+              }
+            },
+            {
+              "step": 2,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "village",
+                "to": "dock"
+              }
+            },
+            {
+              "step": 3,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "target": "mary",
+                "place": "dock",
+                "dialogue_content": [
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Mary. I heard your boat still floats."
+                  },
+                  {
+                    "speaker": "mary",
+                    "line": "Floats, yes. Runs, no. Hull's stove in along the starboard side. I need timber and a proper toolkit before she'll take anyone anywhere."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "I've got the toolkit. Wood's lying around the village if I can drag some down here."
+                  },
+                  {
+                    "speaker": "mary",
+                    "line": "Then drag it. You bring me the wood, I patch her up with you, and there's a seat on board for whoever's left standing when we cast off."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Deal. I'll be back before the tide turns."
+                  },
+                  {
+                    "speaker": "mary",
+                    "line": "See that you are. I don't wait on stragglers."
+                  }
+                ]
+              }
+            },
+            {
+              "step": 4,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "dock",
+                "to": "village"
+              }
+            },
+            {
+              "step": 5,
+              "action": "PICKUP",
+              "actor": "player",
+              "parameters": {
+                "item": "wood_1",
+                "place": "village"
+              }
+            },
+            {
+              "step": 6,
+              "action": "PICKUP",
+              "actor": "player",
+              "parameters": {
+                "item": "wood_2",
+                "place": "village"
+              }
+            },
+            {
+              "step": 7,
+              "action": "PICKUP",
+              "actor": "player",
+              "parameters": {
+                "item": "wood_3",
+                "place": "village"
+              }
+            },
+            {
+              "step": 8,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "village",
+                "to": "dock"
+              }
+            },
+            {
+              "step": 9,
+              "action": "REPAIR",
+              "actor": "player",
+              "parameters": {
+                "toolkit_item": "toolkit_1",
+                "wood_item": "wood_1",
+                "target": "boat",
+                "place": "dock"
+              }
+            }
+          ]
+        },
+        {
+          "quest_id": "C3_Q2",
+          "quest_title": "Word at the Store",
+          "steps": [
+            {
+              "step": 10,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "dock",
+                "to": "village"
+              }
+            },
+            {
+              "step": 11,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "village",
+                "to": "store"
+              }
+            },
+            {
+              "step": 12,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "target": "anne",
+                "place": "store",
+                "dialogue_content": [
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Anne. Mary's boat will sail by nightfall. I'm telling the people I trust."
+                  },
+                  {
+                    "speaker": "anne",
+                    "line": "Then I'm grateful you counted me among them. I'll close up and make my way down when the time comes."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Have you seen Marcus? He was holed up in the hospital."
+                  },
+                  {
+                    "speaker": "anne",
+                    "line": "Still is, last I heard. Fortifying the second floor. Stubborn as a fencepost. If you want him on that boat, you'll need to go to him \u2014 he won't come on his own."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "And George?"
+                  },
+                  {
+                    "speaker": "anne",
+                    "line": "At the powerstation, where he always is. He'll listen to reason if you put it plainly. Linda's a harder sell \u2014 she's wedded to that farm. But tell her the tide's leaving. She deserves the choice."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Thank you. Keep the door shut until I send word."
+                  },
+                  {
+                    "speaker": "anne",
+                    "line": "Always do. Go on, then."
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "quest_id": "C3_Q3",
+          "quest_title": "Rallying the Survivors",
+          "steps": [
+            {
+              "step": 13,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "store",
+                "to": "village"
+              }
+            },
+            {
+              "step": 14,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "village",
+                "to": "powerstation"
+              }
+            },
+            {
+              "step": 15,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "target": "george",
+                "place": "powerstation",
+                "dialogue_content": [
+                  {
+                    "speaker": "PLAYER",
+                    "line": "George. Mary's boat is fixed. We're leaving the island tonight."
+                  },
+                  {
+                    "speaker": "george",
+                    "line": "Tonight. Hm."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Viktor won't stop. The doctor's still down in the outpost cooking up worse. Staying means dying slow."
+                  },
+                  {
+                    "speaker": "george",
+                    "line": "Grid'll go dark when I walk away. Doesn't matter \u2014 no one left to keep the lights on for. I'll close the breakers and meet you at the dock."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Good man."
+                  }
+                ]
+              }
+            },
+            {
+              "step": 16,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "powerstation",
+                "to": "village"
+              }
+            },
+            {
+              "step": 17,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "village",
+                "to": "farm"
+              }
+            },
+            {
+              "step": 18,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "parameter_note": "pick up food supplies for the journey after this",
+                "target": "linda",
+                "place": "farm",
+                "dialogue_content": [
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Linda. There's a boat. Tonight. You should be on it."
+                  },
+                  {
+                    "speaker": "linda",
+                    "line": "Lived on this dirt sixty years. Hard to picture being anywhere else."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Viktor's men are spreading out. The dead are thicker by the week. This land won't keep you safe forever."
+                  },
+                  {
+                    "speaker": "linda",
+                    "line": "...No. Reckon it won't."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Bring what you can carry. We'll need food for the crossing \u2014 mind if I take those supplies?"
+                  },
+                  {
+                    "speaker": "linda",
+                    "line": "Take 'em. Won't do me any good in the ground. I'll follow on behind."
+                  }
+                ]
+              }
+            },
+            {
+              "step": 19,
+              "action": "PICKUP",
+              "actor": "player",
+              "parameters": {
+                "item": "food_supplies_1",
+                "place": "farm"
+              }
+            },
+            {
+              "step": 20,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "farm",
+                "to": "village"
+              }
+            },
+            {
+              "step": 21,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "village",
+                "to": "hospital1"
+              }
+            },
+            {
+              "step": 22,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "hospital1",
+                "to": "hospital2"
+              }
+            },
+            {
+              "step": 23,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "target": "marcus",
+                "place": "hospital2",
+                "dialogue_content": [
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Marcus. Pack it in. We're leaving."
+                  },
+                  {
+                    "speaker": "marcus",
+                    "line": "Position's holding. I don't abandon a hold without orders."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Consider this the order. The boat sails tonight. Anne, George, Linda, Sarah \u2014 they're all coming. I'm not leaving you to die in a stairwell."
+                  },
+                  {
+                    "speaker": "marcus",
+                    "line": "...And Viktor?"
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Viktor stays on his rock. Let the island have him."
+                  },
+                  {
+                    "speaker": "marcus",
+                    "line": "Hm. Fair call. Alright. I'll fall back to the dock. Try not to get yourself shot between now and then."
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "quest_id": "C3_Q4",
+          "quest_title": "The Scientist's Choice",
+          "steps": [
+            {
+              "step": 24,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "hospital2",
+                "to": "hospital1"
+              }
+            },
+            {
+              "step": 25,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "hospital1",
+                "to": "village"
+              }
+            },
+            {
+              "step": 26,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "village",
+                "to": "laboratory"
+              }
+            },
+            {
+              "step": 27,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "target": "sarah",
+                "place": "laboratory",
+                "dialogue_content": [
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Sarah. The boat's repaired. We sail tonight. Bring whatever research you can carry."
+                  },
+                  {
+                    "speaker": "sarah",
+                    "line": "Tonight. That's... earlier than I'd hoped, but the timing is acceptable. My samples are already packed."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "The doctor's still down in the outpost. We're not going after him."
+                  },
+                  {
+                    "speaker": "sarah",
+                    "line": "Good. Engaging him would be tactically and ethically pointless \u2014 his work dies with him on this island. Mine continues elsewhere. That's the better outcome."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Mary needs a hand getting the boat ready. Walk down with me?"
+                  },
+                  {
+                    "speaker": "sarah",
+                    "line": "Of course. Lead the way."
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "quest_id": "C3_Q5",
+          "quest_title": "Cast Off",
+          "steps": [
+            {
+              "step": 28,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "laboratory",
+                "to": "village"
+              }
+            },
+            {
+              "step": 29,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "village",
+                "to": "dock"
+              }
+            },
+            {
+              "step": 30,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "target": "mary",
+                "place": "dock",
+                "dialogue_content": [
+                  {
+                    "speaker": "mary",
+                    "line": "You're back. And you brought a crowd."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Everyone worth bringing. Food for the crossing, too."
+                  },
+                  {
+                    "speaker": "mary",
+                    "line": "Hand it over. I'll stow it below."
+                  }
+                ]
+              }
+            },
+            {
+              "step": 31,
+              "action": "GIVE_ITEM",
+              "actor": "player",
+              "parameters": {
+                "item": "food_supplies_1",
+                "target": "mary",
+                "place": "dock"
+              }
+            },
+            {
+              "step": 32,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "target": "mary",
+                "place": "dock",
+                "dialogue_content": [
+                  {
+                    "speaker": "mary",
+                    "line": "Lines are loose. Engine's warm. Step aboard \u2014 we leave on the next swell."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "What about the island?"
+                  },
+                  {
+                    "speaker": "mary",
+                    "line": "The island keeps what the island wants. We're not it. Not tonight."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Then cast off, Mary. Take us home."
+                  },
+                  {
+                    "speaker": "mary",
+                    "line": "Aye. Hold fast \u2014 here we go."
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+]

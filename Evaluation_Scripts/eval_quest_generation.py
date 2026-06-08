@@ -58,7 +58,7 @@ WORLD_STATE_DIR = os.path.join(ROOT_DIR, "World_State")
 SYSTEM_DIR      = os.path.join(ROOT_DIR, "System")
 WORLD_STATE_FILE = "world_state_initial.json"
 
-OUTPUT_DIR = "eval_results_buas"
+OUTPUT_DIR = os.path.join(os.path.dirname(__file__), "Results", "eval_results_buas")
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 SCALE_STEP_RANGES = {

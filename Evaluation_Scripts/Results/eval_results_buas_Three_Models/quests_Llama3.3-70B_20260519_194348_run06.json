@@ -1,0 +1,686 @@
+[
+  {
+    "model": "Llama3.3-70B",
+    "run": 6,
+    "chapter_id": "C1",
+    "quest_data": {
+      "chapter_id": "C1",
+      "chapter_title": "Desperate Times",
+      "quest_type": "main",
+      "required": true,
+      "scale": "medium",
+      "quests": [
+        {
+          "quest_id": "Q1",
+          "quest_title": "Gathering Information",
+          "steps": [
+            {
+              "step": 1,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "safehouse",
+                "to": "store"
+              }
+            },
+            {
+              "step": 2,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "target": "anne",
+                "place": "store",
+                "dialogue_content": [
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Anne, what's the situation like in the village?"
+                  },
+                  {
+                    "speaker": "anne",
+                    "line": "It's not good. People are getting desperate, and there are rumors of a cure being developed in the laboratory."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Do you know anything about the laboratory? Is it safe to go there?"
+                  },
+                  {
+                    "speaker": "anne",
+                    "line": "I don't know much about it, but I've heard it's locked and requires a special key to enter. You should be careful, though - there are rumors of Viktor's men patrolling the area."
+                  }
+                ]
+              }
+            },
+            {
+              "step": 3,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "store",
+                "to": "graveyard"
+              }
+            },
+            {
+              "step": 4,
+              "action": "PICKUP",
+              "actor": "player",
+              "parameters": {
+                "item": "lab_key_1",
+                "place": "graveyard"
+              }
+            }
+          ]
+        },
+        {
+          "quest_id": "Q2",
+          "quest_title": "Unlocking the Laboratory",
+          "steps": [
+            {
+              "step": 5,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "graveyard",
+                "to": "village"
+              }
+            },
+            {
+              "step": 6,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "village",
+                "to": "laboratory"
+              }
+            },
+            {
+              "step": 7,
+              "action": "UNLOCK",
+              "actor": "player",
+              "parameters": {
+                "key_item": "lab_key_1",
+                "target_place": "laboratory"
+              }
+            },
+            {
+              "step": 8,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "laboratory",
+                "to": "laboratory"
+              }
+            },
+            {
+              "step": 9,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "target": "sarah",
+                "place": "laboratory",
+                "dialogue_content": [
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Sarah, I've heard you're working on a cure. How's it going?"
+                  },
+                  {
+                    "speaker": "sarah",
+                    "line": "It's... complicated. I need a cure sample to continue my research, but I'm not sure where to find one."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "I can help you with that. Where can I find a cure sample?"
+                  },
+                  {
+                    "speaker": "sarah",
+                    "line": "I've heard there's one in the hospital. But be careful - it's not safe there."
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "quest_id": "Q3",
+          "quest_title": "Finding a Cure Sample",
+          "steps": [
+            {
+              "step": 10,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "laboratory",
+                "to": "village"
+              }
+            },
+            {
+              "step": 11,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "village",
+                "to": "hospital1"
+              }
+            },
+            {
+              "step": 12,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "hospital1",
+                "to": "hospital2"
+              }
+            },
+            {
+              "step": 13,
+              "action": "PICKUP",
+              "actor": "player",
+              "parameters": {
+                "item": "cure_sample_1",
+                "place": "hospital2"
+              }
+            },
+            {
+              "step": 14,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "hospital2",
+                "to": "laboratory"
+              }
+            },
+            {
+              "step": 15,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "target": "sarah",
+                "place": "laboratory",
+                "dialogue_content": [
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Sarah, I found the cure sample. What's next?"
+                  },
+                  {
+                    "speaker": "sarah",
+                    "line": "Now we need to synthesize the cure. But the laboratory is out of power..."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "I can help with that. Where can I find a fuse to restore power?"
+                  },
+                  {
+                    "speaker": "sarah",
+                    "line": "I think there's one in the laboratory itself. Check the shelves."
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "quest_id": "Q4",
+          "quest_title": "Restoring Power",
+          "steps": [
+            {
+              "step": 16,
+              "action": "PICKUP",
+              "actor": "player",
+              "parameters": {
+                "item": "fuse_1",
+                "place": "laboratory"
+              }
+            },
+            {
+              "step": 17,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "laboratory",
+                "to": "powerstation"
+              }
+            },
+            {
+              "step": 18,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "target": "george",
+                "place": "powerstation",
+                "dialogue_content": [
+                  {
+                    "speaker": "PLAYER",
+                    "line": "George, I need to restore power to the laboratory. Can you help me?"
+                  },
+                  {
+                    "speaker": "george",
+                    "line": "I can help you with that. But first, you need to give me the fuse."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Here it is. Now what?"
+                  },
+                  {
+                    "speaker": "george",
+                    "line": "Now, I'll install the fuse and restore power to the laboratory."
+                  }
+                ]
+              }
+            },
+            {
+              "step": 19,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "powerstation",
+                "to": "laboratory"
+              }
+            }
+          ]
+        },
+        {
+          "quest_id": "Q5",
+          "quest_title": "Synthesizing the Cure",
+          "steps": [
+            {
+              "step": 20,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "target": "sarah",
+                "place": "laboratory",
+                "dialogue_content": [
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Sarah, the power is back on. What's next?"
+                  },
+                  {
+                    "speaker": "sarah",
+                    "line": "Now we can synthesize the cure. But I need you to do it - I'm not feeling well."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Don't worry, I'll take care of it."
+                  },
+                  {
+                    "speaker": "sarah",
+                    "line": "Thank you... I think I'm going to pass out."
+                  }
+                ]
+              }
+            },
+            {
+              "step": 21,
+              "action": "SYNTHESIZE_CURE",
+              "actor": "player",
+              "parameters": {
+                "place": "laboratory"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "model": "Llama3.3-70B",
+    "run": 6,
+    "chapter_id": "C2",
+    "quest_data": {
+      "chapter_id": "C2",
+      "chapter_title": "Uncovering the Truth",
+      "quest_type": "main",
+      "required": true,
+      "scale": "large",
+      "quests": [
+        {
+          "quest_id": "Q1",
+          "quest_title": "Helping Sarah",
+          "steps": [
+            {
+              "step": 1,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "laboratory",
+                "to": "laboratory"
+              }
+            },
+            {
+              "step": 2,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "target": "sarah",
+                "place": "laboratory",
+                "dialogue_content": [
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Sarah, I need to help you. You're infected."
+                  },
+                  {
+                    "speaker": "sarah",
+                    "line": "I know... I've been trying to find a cure, but it's not going well. I need your help to get better."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Don't worry, I have an antidote. I'll use it on you."
+                  },
+                  {
+                    "speaker": "sarah",
+                    "line": "Thank you... I owe you one."
+                  }
+                ]
+              }
+            },
+            {
+              "step": 3,
+              "action": "USE_CURE",
+              "actor": "player",
+              "parameters": {
+                "item": "antidote_1",
+                "target": "sarah"
+              }
+            }
+          ]
+        },
+        {
+          "quest_id": "Q2",
+          "quest_title": "Restoring Power",
+          "steps": [
+            {
+              "step": 4,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "laboratory",
+                "to": "powerstation"
+              }
+            },
+            {
+              "step": 5,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "target": "george",
+                "place": "powerstation",
+                "dialogue_content": [
+                  {
+                    "speaker": "PLAYER",
+                    "line": "George, I need your help. The laboratory is without power."
+                  },
+                  {
+                    "speaker": "george",
+                    "line": "I can help you with that. We need to install a fuse to restore power."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "I have a fuse. Let's do it."
+                  },
+                  {
+                    "speaker": "george",
+                    "line": "Great, I'll show you how."
+                  }
+                ]
+              }
+            },
+            {
+              "step": 6,
+              "action": "TURN_POWER_ON",
+              "actor": "player",
+              "parameters": {
+                "fuse_item": "fuse_1",
+                "place": "powerstation",
+                "target_place": "laboratory"
+              }
+            }
+          ]
+        },
+        {
+          "quest_id": "Q3",
+          "quest_title": "Gathering Information",
+          "steps": [
+            {
+              "step": 7,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "powerstation",
+                "to": "store"
+              }
+            },
+            {
+              "step": 8,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "target": "anne",
+                "place": "store",
+                "dialogue_content": [
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Anne, I need to know what's going on in the village. Have you heard anything?"
+                  },
+                  {
+                    "speaker": "anne",
+                    "line": "There are rumors of someone pulling the strings from behind the scenes. But I don't know who or what it is."
+                  },
+                  {
+                    "speaker": "PLAYER",
+                    "line": "I see. Do you know anything about the laboratory or the outpost?"
+                  },
+                  {
+                    "speaker": "anne",
+                    "line": "Not much, but I've heard that the doctor is working on some kind of research. And Viktor is trying to take control of the village."
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "model": "Llama3.3-70B",
+    "run": 6,
+    "chapter_id": "C3",
+    "quest_data": {
+      "chapter_id": "C3",
+      "chapter_title": "Escape from the Island",
+      "quest_type": "main",
+      "required": true,
+      "scale": "large",
+      "quests": [
+        {
+          "quest_id": "Q1",
+          "quest_title": "Find a Way Off the Island",
+          "steps": [
+            {
+              "step": 1,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "store",
+                "to": "dock"
+              }
+            },
+            {
+              "step": 2,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "target": "mary",
+                "place": "dock",
+                "dialogue_content": [
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Mary, I need to get off this island. Can you help me?"
+                  },
+                  {
+                    "speaker": "mary",
+                    "line": "I'm trying to repair my boat, but I need some materials. Can you find me some wood and a toolkit?"
+                  }
+                ]
+              }
+            },
+            {
+              "step": 3,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "dock",
+                "to": "village"
+              }
+            },
+            {
+              "step": 4,
+              "action": "PICKUP",
+              "actor": "player",
+              "parameters": {
+                "item": "wood_1",
+                "place": "village"
+              }
+            },
+            {
+              "step": 5,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "village",
+                "to": "outpost3"
+              }
+            },
+            {
+              "step": 6,
+              "action": "PICKUP",
+              "actor": "player",
+              "parameters": {
+                "item": "toolkit_1",
+                "place": "outpost3"
+              }
+            },
+            {
+              "step": 7,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "outpost3",
+                "to": "dock"
+              }
+            },
+            {
+              "step": 8,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "target": "mary",
+                "place": "dock",
+                "dialogue_content": [
+                  {
+                    "speaker": "PLAYER",
+                    "line": "I found the materials you needed. Here's the wood and toolkit."
+                  },
+                  {
+                    "speaker": "mary",
+                    "line": "Great, now I can fix my boat. Let's get out of here!"
+                  }
+                ]
+              }
+            },
+            {
+              "step": 9,
+              "action": "REPAIR",
+              "actor": "player",
+              "parameters": {
+                "toolkit_item": "toolkit_1",
+                "wood_item": "wood_1",
+                "target": "boat",
+                "place": "dock"
+              }
+            }
+          ]
+        },
+        {
+          "quest_id": "Q2",
+          "quest_title": "Help Sarah with the Cure",
+          "steps": [
+            {
+              "step": 10,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "dock",
+                "to": "laboratory"
+              }
+            },
+            {
+              "step": 11,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "target": "sarah",
+                "place": "laboratory",
+                "dialogue_content": [
+                  {
+                    "speaker": "PLAYER",
+                    "line": "Sarah, I heard you're working on a cure. Can I help you?"
+                  },
+                  {
+                    "speaker": "sarah",
+                    "line": "Actually, I need a cure sample to continue my research. Can you find one for me?"
+                  }
+                ]
+              }
+            },
+            {
+              "step": 12,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "laboratory",
+                "to": "cave"
+              }
+            },
+            {
+              "step": 13,
+              "action": "PICKUP",
+              "actor": "player",
+              "parameters": {
+                "item": "cure_sample_1",
+                "place": "cave"
+              }
+            },
+            {
+              "step": 14,
+              "action": "MOVE",
+              "actor": "player",
+              "parameters": {
+                "from": "cave",
+                "to": "laboratory"
+              }
+            },
+            {
+              "step": 15,
+              "action": "TALK",
+              "actor": "player",
+              "parameters": {
+                "target": "sarah",
+                "place": "laboratory",
+                "dialogue_content": [
+                  {
+                    "speaker": "PLAYER",
+                    "line": "I found the cure sample you needed."
+                  },
+                  {
+                    "speaker": "sarah",
+                    "line": "Great, now I can finish my research. Thanks for your help!"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+]
