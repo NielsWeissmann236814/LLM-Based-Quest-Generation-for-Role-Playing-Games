@@ -2,7 +2,7 @@
 
 Repository for the graduation project **"LLM-Based Quest Generation for Role-Playing Games"** by Niels Weissmann (Student Number: 236814), Breda University of Applied Sciences, 2026.
 
-This repository contains the Python quest generation API, evaluation scripts, input definitions, and all generated results used in the accompanying research paper. The paper is available [here](https://github.com/NielsWeissmann236814/LLM-Based-Quest-Generation-for-Role-Playing-Games/blob/main/LLMQuestGenerationPaper.pdf).
+This repository contains the Python quest generation API, evaluation scripts, input definitions, and all generated results used in the accompanying research paper.
 
 The game prototype used in this project was developed by **Edirlei Soares de Lima** and is available at [https://github.com/edirleilima/zombie-days](https://github.com/edirleilima/zombie-days).
 
@@ -20,32 +20,33 @@ The full system and user prompts used in this work are available in `system_prom
 
 ```
 /
-│   system_prompt.md     → Full system and user prompts used for quest generation
-│   LLMQuestGenerationPaper.pdf → Accompanying research paper
+│   system_prompt.md          → Full system and user prompts used for quest generation
 │
-/api                     → Python quest generation API (FastAPI)
-│   quest_generation.py  → /generate produces a chapter plan, /validate checks it against
-│                          the live world state and automatically replans if invalid
-│                          (/validate is implemented but not yet called from the game)
+/Generation_Pipeline          → Python quest generation API (FastAPI)
+│   quest_generation.py       → /generate produces a chapter plan, /validate checks it against
+│                               the live world state and automatically replans if invalid
+│                               (/validate is implemented but not yet called from the game)
+│   requirements.txt          → Python dependencies
 │
-/data                    → Input definitions used in the evaluation
-│   action_library.json  → All valid player actions with preconditions and parameters
-│   world_rules.json     → World state rules governing action preconditions
-│   chapters.json        → Chapter definitions with situation descriptions and scale
-│   characters.json      → NPC definitions used during generation
+/Input_Specifications         → Input definitions used in the evaluation
+│   action_library.json       → All valid player actions with preconditions and parameters
+│   world_rules.json          → World state rules governing action preconditions
+│   chapters.json             → Chapter definitions with situation descriptions and scale
+│   characters.json           → NPC definitions used during generation
 │
-/Eval_Scripts            → Evaluation scripts, notebook, and full results — see README inside
+/Evaluation_Scripts           → Evaluation scripts, notebook, and full results — see README inside
+│   requirements.txt          → Python dependencies
 ```
 
 ---
 
-## API
+## Generation Pipeline
 
-The `/api` folder contains the FastAPI quest generation service.
+The `/Generation_Pipeline` folder contains the FastAPI quest generation service.
 
 ### Setup
 
-Create a `.env` file inside the `/api` folder:
+Create a `.env` file inside the `/Generation_Pipeline` folder:
 
 ```
 BUAS_LLM_KEY=your_key_here
@@ -54,8 +55,8 @@ BUAS_LLM_KEY=your_key_here
 ### Running
 
 ```bash
-cd api
-pip install fastapi uvicorn openai python-dotenv
+cd Generation_Pipeline
+pip install -r requirements.txt
 uvicorn quest_generation:app --reload --port 8000
 ```
 
@@ -71,9 +72,9 @@ The scripts are configured to use a BUAS-hosted inference server. To reproduce w
 
 ---
 
-## Input Definitions
+## Input Specifications
 
-The `/data` folder contains the structured input files used by both the generation API and the evaluation scripts:
+The `/Input_Specifications` folder contains the structured input files used by both the generation pipeline and the evaluation scripts:
 
 | File | Description |
 |---|---|
@@ -86,21 +87,21 @@ The `/data` folder contains the structured input files used by both the generati
 
 ## Evaluation Scripts
 
-The `/Eval_Scripts` folder contains the scripts used to measure quest quality across the five models evaluated in the paper.
+The `/Evaluation_Scripts` folder contains the scripts used to measure quest quality across the five models evaluated in the paper.
 
 - `eval_quest_generation.py` — runs generation and evaluation across all local models and chapters
 - `eval_quest_generation_Claude.py` — Claude-specific version; run separately due to API parameter differences
 - `Evaluation_Notebook_Final_Version.ipynb` — notebook for analysing and visualising results
 
 Full results are stored per model in subfolders:
- 
+
 | Folder | Model |
 |---|---|
 | `eval_results_buas_Claude` | Claude Opus 4.7 (10 runs) |
 | `eval_results_buas_Speed_Test` | Qwen3.6-27B (10 runs) |
 | `eval_results_buas_Three_Models` | GPT-OSS-120B, Llama-3.3-70B, Qwen3.5-122B (10 runs each) |
 
-See `Eval_Scripts/README.md` for a full description of all metrics, configuration, and hardware used during the evaluation.
+See `Evaluation_Scripts/README.md` for a full description of all metrics, configuration, and hardware used during the evaluation.
 
 ---
 
@@ -108,7 +109,7 @@ See `Eval_Scripts/README.md` for a full description of all metrics, configuratio
 
 - Python 3.11+
 - `fastapi`, `uvicorn`, `openai`, `python-dotenv`
-- A valid API key in `/api/.env`
+- A valid API key in `/Generation_Pipeline/.env`
 
 ---
 
