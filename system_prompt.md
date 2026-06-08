@@ -6,7 +6,7 @@ Note: The system prompt is partially dynamic. The following placeholders are fil
   - {win_condition} — changes based on whether the current chapter is the final one
   - {rules_text}    — formatted list of world rules loaded from world_rules.json
   - {action_library} — filtered player-only actions loaded from action_library.json
-
+ 
 The static portion of the system prompt is reproduced below exactly as sent to the LLM.
 
 =================================
