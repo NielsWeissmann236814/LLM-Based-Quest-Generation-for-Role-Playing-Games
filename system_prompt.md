@@ -1,6 +1,6 @@
 SYSTEM PROMPT — Quest Generation
 =================================
-Used in: Quest_QwenV9.py (Generation_Scripts) and eval_quest_generation.py (Eval_Scripts)
+Used in: quest_generation.py and eval_quest_generation.py 
 
 Note: The system prompt is partially dynamic. The following placeholders are filled at runtime:
   - {win_condition} — changes based on whether the current chapter is the final one

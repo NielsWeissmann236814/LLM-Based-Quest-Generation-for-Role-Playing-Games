@@ -8,8 +8,8 @@ This folder contains the evaluation script and analysis notebook used to measure
 
 - `eval_quest_generation.py` — main evaluation script for all local models; runs generation and scoring across all configured models and chapters
 - `eval_quest_generation_Claude.py` — Claude-specific version of the evaluation script. Claude Opus 4.7 does not accept the `temperature` parameter or the `extra_body` thinking flags used by the local models. This version has those removed to avoid API errors. Run Claude separately using this script.
-- `Evaluation_Notebook_First_Version.ipynb` — notebook for analysing and visualising the results; produces the tables and figures used in the paper
-- `system_prompt.txt` — see `Generation_Scripts/system_prompt.txt`; the same prompt was used for both scripts
+- `Evaluation_Notebook_Final_Version.ipynb` — notebook for analysing and visualising the results; produces the tables and figures used in the paper
+- `system_prompt.md` — see repo root.
 
 ---
 
@@ -73,7 +73,7 @@ At the end of all runs, two CSV files are produced:
 
 ## Analysis Notebook
 
-`Evaluation_Notebook_First_Version.ipynb` is used to analyse and visualise the results after running the evaluation script. Open it in Jupyter and run the cells to:
+`Evaluation_Notebook_Final_Version.ipynb` is used to analyse and visualise the results after running the evaluation script. Open it in Jupyter and run the cells to:
 
 - Load the detail and summary CSVs produced by the evaluation script
 - Generate the metric tables used in the paper
@@ -129,6 +129,9 @@ The results were collected in 4 separate runs. The first run used Qwen3.6-27B as
 ---
 
 The three result folders correspond to the four separate evaluation runs. eval_results_buas_Three_Models contains the first three-model run (GPT-OSS-120B, Llama-3.3-70B, Qwen3.5-122B). eval_results_buas_Speed_Test contains the Qwen3.6-27B rerun on the correct server. eval_results_buas_Claude contains the Claude Opus 4.7 run.
+
+---
+
 ## Hardware
 
 The evaluation was run on:
