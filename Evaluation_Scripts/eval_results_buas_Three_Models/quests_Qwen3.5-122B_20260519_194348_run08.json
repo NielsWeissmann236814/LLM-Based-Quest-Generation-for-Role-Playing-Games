@@ -21,6 +21,7 @@
               "parameters": {
                 "from": "safehouse",
                 "to": "village"
+              }
             },
             {
               "step": 2,
