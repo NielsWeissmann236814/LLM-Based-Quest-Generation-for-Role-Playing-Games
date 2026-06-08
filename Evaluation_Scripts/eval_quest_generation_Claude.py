@@ -51,7 +51,7 @@ RUNS_PER_MODEL   = 1
 MAX_RETRIES      = 3
 MAX_TOKENS       = 8192
 
-ROOT_DIR        = r"C:\Users\niels\OneDrive\Documents\2025-26-graduation-NielsWeissmann236814\Inputs"
+ROOT_DIR = os.path.join(os.path.dirname(__file__), "Inputs")
 CHAPTERS_DIR    = os.path.join(ROOT_DIR, "Chapters")
 CHARACTERS_DIR  = os.path.join(ROOT_DIR, "Characters")
 WORLD_STATE_DIR = os.path.join(ROOT_DIR, "World_State")
